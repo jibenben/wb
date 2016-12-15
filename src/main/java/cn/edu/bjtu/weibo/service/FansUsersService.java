@@ -2,6 +2,8 @@ package cn.edu.bjtu.weibo.service;
 
 import java.util.List;
 
+import cn.edu.bjtu.weibo.model.User;
+
 /**
  * When a use want to see all his fans
  * 
@@ -18,4 +20,13 @@ public interface FansUsersService {
 	 * @return
 	 */
 	List<?> getFansUserIdList(int userId, int pageIndex, int numberPerPage);
+	
+	/**
+	 * it needs pagination
+	 * @param userId
+	 * @param pageIndex
+	 * @param numberPerPage
+	 * @return
+	 */
+	List<User> getFansUserList(int userId, int pageIndex, int numberPerPage);
 }

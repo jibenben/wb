@@ -14,12 +14,12 @@ public interface BanWeiboService {
 	 * @param weiboId : the baned weibo Id
 	 * @return
 	 */
-	boolean BanWeibo(int userId,int weiboId);
+	boolean banWeibo(int userId,int weiboId);
 	/**
 	 * the reverse operation for BanWeibo
 	 * @param userId : the user who want to ban some weibo he dislike
 	 * @param weiboId : the baned weibo Id
 	 * @return
 	 */
-	boolean unBanWeibo(int userId, int weiboId);
+	boolean unbanWeibo(int userId, int weiboId);
 }

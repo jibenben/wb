@@ -21,5 +21,5 @@ public interface BanUserService {
 	 * @param banedUserId
 	 * @return
 	 */
-	boolean unBanUser(int userId, int banedUserId);
+	boolean unbanUser(int userId, int banedUserId);
 }
