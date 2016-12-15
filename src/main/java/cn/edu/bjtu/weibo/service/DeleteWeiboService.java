@@ -1,8 +1,18 @@
 package cn.edu.bjtu.weibo.service;
 
-import cn.edu.bjtu.weibo.model.User;
-import cn.edu.bjtu.weibo.model.Weibo;
+/**
+ * Delete weibo then it just remove the weiboId from the weiboId list under a specified userId
+ * 
+ * @author Liu Jinfeng
+ *
+ */
 
 public interface DeleteWeiboService {
-	public boolean DeleteWeibo(User user,Weibo weibo);
+	/**
+	 * 
+	 * @param userId
+	 * @param weiboId
+	 * @return
+	 */
+	boolean DeleteWeibo(int userId,int weiboId);
 }
