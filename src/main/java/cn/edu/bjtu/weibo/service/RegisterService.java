@@ -1,12 +1,18 @@
 package cn.edu.bjtu.weibo.service;
 
-/*
-Register  a user
-*/
+/**
+ * Register a new user, make sure the password should be encrypted
+ * 
+ * @author Liu Jinfeng
+ *
+ */
+
 public interface RegisterService {
-	/*
-	username
-	password
-	*/
-	Boolean registerNewUser(String username, String password);
+	/**
+	 * 
+	 * @param username
+	 * @param password
+	 * @return
+	 */
+	boolean registerNewUser(String username, String password);
 }
