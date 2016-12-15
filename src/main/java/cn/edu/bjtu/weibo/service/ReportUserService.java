@@ -2,7 +2,14 @@ package cn.edu.bjtu.weibo.service;
 
 import cn.edu.bjtu.weibo.model.User;
 
+/*
+when a user report esle user
 
+*/
 public interface ReportUserService {
-	public boolean ReportUser(User user,User user1);
+	/*
+	the secound para is the id by report
+	
+	*/
+	 boolean ReportUser(int UserId,int UserIdreport);
 }
