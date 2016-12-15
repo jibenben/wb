@@ -6,5 +6,5 @@ import cn.edu.bjtu.weibo.model.User;
 import cn.edu.bjtu.weibo.model.Weibo;
 
 public interface RecommendWeiboservice {
-	public List<Weibo> getRecommentWeibo(User user);
+	 List<Weibo> getRecommentWeibo(User user);
 }
