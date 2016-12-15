@@ -2,7 +2,7 @@ package cn.edu.bjtu.weibo.service;
 
 import java.util.List;
 
-import cn.edu.bjtu.weibo.model.WeiboSR;
+import cn.edu.bjtu.weibo.model.BaseContentSR;
 
 /**
  * Search something in some user`s weibo content.
@@ -10,11 +10,11 @@ import cn.edu.bjtu.weibo.model.WeiboSR;
  * @author Liu Jinfeng
  *
  */
-public interface SearchUserWeiboService {
+public interface SearchUserContentService {
 	/**
 	 * it needs pagination
 	 * @param userId
 	 * @return
 	 */
-	List<WeiboSR> getSearchedUserWeiboList(int userId, String keyword, int pageIndex, int numberPerPage);
+	List<BaseContentSR> getSearchedUserWeiboList(int userId, String keyword, int pageIndex, int numberPerPage);
 }
