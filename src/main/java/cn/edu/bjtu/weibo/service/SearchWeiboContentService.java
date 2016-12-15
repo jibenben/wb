@@ -1,11 +1,18 @@
 package cn.edu.bjtu.weibo.service;
 
+import java.util.List;
+
 /**
- * when you want to new the weibo content
+ * When the user search some keyword in the weibo content.
+ * 
+ * @author Liu Jinfeng
+ *
  */
 public interface SearchWeiboContentService {
 	/**
-	 * para weiboId
+	 * it needs pagination
+	 * @param keyword
+	 * @return
 	 */
-	String getWeiboContent(int weiboId);
+	List<?> getSearchedWeiboIdList(String keyword, int pageIndex, int numberPerPage);
 }

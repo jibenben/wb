@@ -8,7 +8,7 @@ import java.util.List;
  * @author Liu Jinfeng
  *
  */
-public interface SearchUserWeiboservice {
+public interface SearchUserWeiboService {
 	/**
 	 * it needs pagination
 	 * @param userId
