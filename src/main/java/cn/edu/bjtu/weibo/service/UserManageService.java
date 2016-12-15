@@ -9,6 +9,6 @@ public interface UserManageService {
 	 * ban a user by userid
 	 * @param userid
 	 */
-	 boolean banUser(int userId);
-	 boolean unBanUser(int userId);
+	boolean banUser(int userId);
+	boolean unBanUser(int userId);
 }
