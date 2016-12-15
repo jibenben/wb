@@ -1,5 +1,14 @@
 package cn.edu.bjtu.weibo.service;
-
-public interface Logoutservice {
-	public boolean logout();
+/**
+ * When user try to logout weibo
+ * @author Liu Jinfeng
+ *
+ */
+public interface LogoutService {
+	/**
+	 * 
+	 * @param userId
+	 * @return
+	 */
+	boolean logout(int userId);
 }
