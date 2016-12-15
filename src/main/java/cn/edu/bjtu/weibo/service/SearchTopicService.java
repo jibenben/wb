@@ -2,11 +2,13 @@ package cn.edu.bjtu.weibo.service;
 
 import java.util.List;
 
-import cn.edu.bjtu.weibo.model.Topic;
-
 /**
- * when you search topic by some keyword
+ * Search some keywords in the topic.
+ * 
+ * @author Liu Jinfeng
+ *
  */
+
 public interface SearchTopicService {
-	List<Topic> SearchTopic(String topic);
+	List<?> getSearchedTopicIdList(String topic);
 }

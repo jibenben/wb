@@ -7,5 +7,11 @@ package cn.edu.bjtu.weibo.service;
  *
  */
 public interface ReportWeiboService {
+	/**
+	 * 
+	 * @param userId
+	 * @param weiboId
+	 * @return
+	 */
 	boolean reportWeibo(int userId,int weiboId);
 }
