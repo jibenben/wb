@@ -2,14 +2,17 @@ package cn.edu.bjtu.weibo.service;
 
 import java.util.List;
 
-import cn.edu.bjtu.weibo.model.User;
-import cn.edu.bjtu.weibo.model.Weibo;
 /**
- * when user search the weibo in his weibo list
+ * Search something in some user`s weibo content.
+ * 
+ * @author Liu Jinfeng
+ *
  */
 public interface SearchUserWeiboservice {
 	/**
-	 * para userId
+	 * it needs pagination
+	 * @param userId
+	 * @return
 	 */
-	 List<Weibo> SearchUserWeibo(int userId);
+	List<?> getSearchedWeiboIdList(int userId, String keyword, int pageIndex, int numberPerPage);
 }
