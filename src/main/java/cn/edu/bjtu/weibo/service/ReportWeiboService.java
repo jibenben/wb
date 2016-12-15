@@ -3,6 +3,9 @@ package cn.edu.bjtu.weibo.service;
 import cn.edu.bjtu.weibo.model.User;
 import cn.edu.bjtu.weibo.model.Weibo;
 
+/*
+when a user will report the weibo 
+*/
 public interface ReportWeiboService {
-	public boolean ReportWeibo(User user,Weibo weibo);
+	 boolean ReportWeibo(int UserId,int weiboId);
 }
