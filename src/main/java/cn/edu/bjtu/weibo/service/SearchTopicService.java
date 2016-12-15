@@ -4,6 +4,9 @@ import java.util.List;
 
 import cn.edu.bjtu.weibo.model.Topic;
 
+/**
+ * when you search topic by some keyword
+ */
 public interface SearchTopicService {
-	public List<Topic> SearchTopic(String topic);
+	List<Topic> SearchTopic(String topic);
 }
