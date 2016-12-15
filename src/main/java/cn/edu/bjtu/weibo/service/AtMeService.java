@@ -2,8 +2,10 @@ package cn.edu.bjtu.weibo.service;
 
 import java.util.List;
 
+import cn.edu.bjtu.weibo.model.BaseContent;
+
 /**
- * When a user want to know all the weibo which @ him.
+ * When a user want to know all the weibo or Comment(means we need to use BaseContent) which @ him.
  * 
  * @author Liu Jinfeng
  *
@@ -17,5 +19,5 @@ public interface AtMeService {
 	 * @param numberPerPage
 	 * @return
 	 */
-	List<?> getAtMeWeiboIdList(int userId, int pageIndex, int numberPerPage);
+	List<BaseContent> getAtMeContentList(int userId, int pageIndex, int numberPerPage);
 }
