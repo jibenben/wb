@@ -1,8 +1,25 @@
 package cn.edu.bjtu.weibo.service;
 
-import cn.edu.bjtu.weibo.model.User;
-import cn.edu.bjtu.weibo.model.Weibo;
+/**
+ * When a user dislike some weibo, he can ban the weibo, and he won`t see this weibo after he refresh the weibo list page.
+ * 
+ * @author Liu Jinfeng
+ *
+ */
 
 public interface BanWeiboService {
-	public boolean BanUser(User user,Weibo weibo);
+	/**
+	 * 
+	 * @param userId : the user who want to ban some weibo he dislike
+	 * @param weiboId : the baned weibo Id
+	 * @return
+	 */
+	boolean BanWeibo(int userId,int weiboId);
+	/**
+	 * the reverse operation for BanWeibo
+	 * @param userId : the user who want to ban some weibo he dislike
+	 * @param weiboId : the baned weibo Id
+	 * @return
+	 */
+	boolean unBanWeibo(int userId, int weiboId);
 }
