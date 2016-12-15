@@ -6,5 +6,11 @@ package cn.edu.bjtu.weibo.service;
  *
  */
 public interface LoginService {
+	/**
+	 * 
+	 * @param usename
+	 * @param password
+	 * @return
+	 */
 	boolean loginService(String usename, String password);
 }

@@ -16,37 +16,20 @@ public interface MessageToMeService {
 	 */
 	boolean atMeInform(int fromUserId ,int toUserId);
 	/**
-	 * When a user comment another user`s comment, that user should be notified
-	 * @param fromUserId
-	 * @param toUserId
-	 * @param commentId
-	 * @param originalCommentId
-	 * @return
-	 */
-	boolean commentMyCommentInform(int fromUserId, int toUserId, int commentId, int originalCommentId);
-	/**
-	 * When a user comment another user`s weibo, that user should be notified
+	 * When a user comment another user`s weibo or comment, that user should be notified
 	 * @param fromUserId
 	 * @param toUserId
 	 * @param commentId
 	 * @param weiboId
 	 * @return
 	 */
-	boolean commentMyWeiboInform(int fromUserId, int toUserId, int commentId, int weiboId);
+	boolean commentMyWeiboOrCommentInform(int fromUserId, int toUserId, int commentId, int weiboOrCommentId);
 	/**
-	 * When a user like some user`s weibo, that user should be notified
+	 * When a user like some user`s weibo or comments, that user should be notified
 	 * @param fromUserId
 	 * @param toUserId
 	 * @param weiboId
 	 * @return
 	 */
-	boolean likeMyWeiboInform(int fromUserId, int toUserId, int weiboId);
-	/**
-	 * When a user like some user`s comment, that user should be notified
-	 * @param fromUserId
-	 * @param toUserId
-	 * @param commentId
-	 * @return
-	 */
-	boolean likeMyCommentInform(int fromUserId, int toUserId, int commentId);
+	boolean likeMyWeiboOrCommentInform(int fromUserId, int toUserId, int weiboOrCommentId);
 }
