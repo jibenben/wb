@@ -1,15 +1,24 @@
 package cn.edu.bjtu.weibo.service;
 
-import cn.edu.bjtu.weibo.model.User;
-import cn.edu.bjtu.weibo.model.Weibo;
-/*
-uesr like a weibo Action
-*/
+/**
+ * When user like some weibo or comment, he can use it.
+ * @author Liu Jinfeng
+ *
+ */
 public interface LikeActionService {
 	
-	/*
-	userId
-	weiboId
-	*/
-	public boolean Like(int userId ,int weiboId);
+	/**
+	 * Like weibo
+	 * @param userId
+	 * @param weiboId
+	 * @return
+	 */
+	boolean LikeWeiboAction(int userId ,int weiboId);
+	/**
+	 * Like comment
+	 * @param userId
+	 * @param commentId
+	 * @return
+	 */
+	boolean LikeCommentAction(int userId ,int commentId);
 }
