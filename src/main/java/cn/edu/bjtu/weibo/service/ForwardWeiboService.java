@@ -2,6 +2,8 @@ package cn.edu.bjtu.weibo.service;
 
 import java.util.List;
 
+import cn.edu.bjtu.weibo.model.User;
+
 /**
  * All the operation are related to forward weibo
  * @author Liu Jinfeng
@@ -16,12 +18,12 @@ public interface ForwardWeiboService {
 	 */
 	int getForwardNumber(int weiboId);
 	/**
-	 * when a user want to see all the user id who forward this weibo
+	 * when a user want to see all the user who forward this weibo
 	 * it needs pagination
 	 * @param weiboId
 	 * @return
 	 */
-	List<?> getForwardUserIdList(int weiboId, int pageIndex, int numberPerPage);
+	List<User> getForwardUserIdList(int weiboId, int pageIndex, int numberPerPage);
 	/**
 	 * When a user do forward weibo action
 	 * @param userId
