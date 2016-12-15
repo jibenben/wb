@@ -1,16 +1,17 @@
 package cn.edu.bjtu.weibo.service;
 
-import cn.edu.bjtu.weibo.model.Picture;
-import cn.edu.bjtu.weibo.model.User;
-/*
-when user likes a picture
-*/
+/**
+ * When a user want to show his interest for some picture, he can use this service.
+ * 
+ * @author Liu Jinfeng
+ *
+ */
 public interface LikePictureService {
-	/*
-	userId
-	pictureurl
-	
-	*/
-	public boolean LikePicture(int userId ,String picurl);
-
+	/**
+	 * 
+	 * @param userId
+	 * @param picId
+	 * @return
+	 */
+	boolean LikePictureAction(int userId ,String picId);
 }
