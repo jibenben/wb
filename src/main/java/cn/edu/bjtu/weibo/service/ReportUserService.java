@@ -1,20 +1,18 @@
 package cn.edu.bjtu.weibo.service;
 
-<<<<<<< HEAD
-import cn.edu.bjtu.weibo.model.User;
+/**
+ * When some user publish some thing illegal, you can use it to report this user to the admin.
+ * 
+ * @author Liu Jinfeng
+ *
+ */
 
-/*
-when a user report esle user
-
-*/
 public interface ReportUserService {
-	/*
-	the secound para is the id by report
-	
-	*/
-	 boolean ReportUser(int UserId,int UserIdreport);
-=======
-public interface ReportUserService {
+	/**
+	 * 
+	 * @param userId
+	 * @param reportedUserId
+	 * @return
+	 */
 	boolean ReportUser(int userId, int reportedUserId);
->>>>>>> 1c854f0a8cc65c8bb7dce631d3eecd7b36f3f61a
 }
