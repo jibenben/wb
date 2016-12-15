@@ -6,6 +6,7 @@ import cn.edu.bjtu.weibo.model.Weibo;
 uesr like a weibo Action
 */
 public interface LikeActionService {
+	
 	/*
 	userId
 	weiboId
