@@ -26,5 +26,5 @@ public interface CommentMessageService {
 	 * @param baseContentId : can be weibo or comment
 	 * @return
 	 */
-	public boolean CommentMessage(int userId, int commentId, int weiboOrCommentId);
+	boolean CommentMessage(int userId, int commentId, int weiboOrCommentId);
 }
