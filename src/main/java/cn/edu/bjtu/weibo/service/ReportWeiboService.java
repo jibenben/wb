@@ -1,11 +1,11 @@
 package cn.edu.bjtu.weibo.service;
 
-import cn.edu.bjtu.weibo.model.User;
-import cn.edu.bjtu.weibo.model.Weibo;
-
-/*
-when a user will report the weibo 
-*/
+/**
+ * When some weibo contain illegal or unreal content, you can use this service to report this weibo to Admin
+ * 
+ * @author Liu Jinfeng
+ *
+ */
 public interface ReportWeiboService {
-	 boolean ReportWeibo(int UserId,int weiboId);
+	boolean reportWeibo(int userId,int weiboId);
 }
