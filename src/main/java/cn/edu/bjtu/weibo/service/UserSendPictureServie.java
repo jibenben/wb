@@ -4,7 +4,9 @@ import java.util.List;
 
 import cn.edu.bjtu.weibo.model.Picture;
 import cn.edu.bjtu.weibo.model.User;
-
+/**
+ * the history of picture about a user
+ */
 public interface UserSendPictureServie {
-	public List<Picture> UserSendPicture(User user);
+	 List<Picture> UserSendPicture(int userId);
 }
