@@ -1,7 +1,17 @@
 package cn.edu.bjtu.weibo.service;
 
-import cn.edu.bjtu.weibo.model.User;
+/**
+ * Usually it will show automatically beside the user profile.
+ * 
+ * @author Liu Jinfeng
+ *
+ */
 
 public interface FansNumberService {
-	public int getFansmNuber(User user);
+	/**
+	 * 
+	 * @param userId
+	 * @return
+	 */
+	int getFansmNuber(int userId);
 }
