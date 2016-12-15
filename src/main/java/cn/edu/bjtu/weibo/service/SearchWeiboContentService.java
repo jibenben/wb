@@ -2,6 +2,8 @@ package cn.edu.bjtu.weibo.service;
 
 import java.util.List;
 
+import cn.edu.bjtu.weibo.model.WeiboSR;
+
 /**
  * When the user search some keyword in the weibo content.
  * 
@@ -14,5 +16,5 @@ public interface SearchWeiboContentService {
 	 * @param keyword
 	 * @return
 	 */
-	List<?> getSearchedWeiboIdList(String keyword, int pageIndex, int numberPerPage);
+	List<WeiboSR> getSearchedWeiboList(String keyword, int pageIndex, int numberPerPage);
 }

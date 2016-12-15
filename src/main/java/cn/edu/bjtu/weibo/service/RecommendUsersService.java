@@ -11,9 +11,11 @@ import java.util.List;
 
 public interface RecommendUsersService {
 	/**
-	 * 
+	 * it needs pagination
 	 * @param userId
+	 * @param pageIndex
+	 * @param numberPerPage
 	 * @return
 	 */
-	List<?> getRecommendUserIdList(int userId);
+	List<?> getRecommendUserIdList(int userId, int pageIndex, int numberPerPage);
 }

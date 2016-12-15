@@ -2,6 +2,8 @@ package cn.edu.bjtu.weibo.service;
 
 import java.util.List;
 
+import cn.edu.bjtu.weibo.model.UserSR;
+
 /**
  * When user want to search some user according to the given name
  * 
@@ -17,5 +19,5 @@ public interface SearchUserService {
 	 * @param numberPerPage
 	 * @return
 	 */
-	List<?> getSearchedUserIdList(String username, int pageIndex, int numberPerPage);
+	List<UserSR> getSearchedUserList(String username, int pageIndex, int numberPerPage);
 }

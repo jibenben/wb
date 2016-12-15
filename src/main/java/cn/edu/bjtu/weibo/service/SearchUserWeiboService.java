@@ -2,6 +2,8 @@ package cn.edu.bjtu.weibo.service;
 
 import java.util.List;
 
+import cn.edu.bjtu.weibo.model.WeiboSR;
+
 /**
  * Search something in some user`s weibo content.
  * 
@@ -14,5 +16,5 @@ public interface SearchUserWeiboService {
 	 * @param userId
 	 * @return
 	 */
-	List<?> getSearchedWeiboIdList(int userId, String keyword, int pageIndex, int numberPerPage);
+	List<WeiboSR> getSearchedUserWeiboList(int userId, String keyword, int pageIndex, int numberPerPage);
 }

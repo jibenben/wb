@@ -2,8 +2,10 @@ package cn.edu.bjtu.weibo.service;
 
 import java.util.List;
 
+import cn.edu.bjtu.weibo.model.Weibo;
+
 /**
- * This service show the hot weibo id for a given userId
+ * This service show the hot weibo list for a given userId
  * 
  * @author Liu Jinfeng
  *
@@ -16,5 +18,5 @@ public interface UserHotWeiboService {
 	 * @param numberPerPage
 	 * @return weibo id list
 	 */
-	List<?> getUserHotWeiboIdList(int userId, int pageIndex, int numberPerPage);
+	List<Weibo> getUserHotWeiboList(int userId, int pageIndex, int numberPerPage);
 }

@@ -4,7 +4,21 @@ import java.util.List;
 
 import cn.edu.bjtu.weibo.model.User;
 
-public interface SameAttentionService {
-	public List<User> getSameAttention(User user1,User user2);
+/**
+ * Try to find some relationship between two users.
+ * 
+ * @author Liu Jinfeng
+ *
+ */
 
+public interface SameAttentionService {
+	/**
+	 * it needs pagination
+	 * @param userId
+	 * @param otherUserId
+	 * @param pageIndex
+	 * @param numberPerPage
+	 * @return
+	 */
+	List<User> getSameAttentionUserList(int userId,int otherUserId, int pageIndex, int numberPerPage);
 }
