@@ -1,18 +1,19 @@
 package cn.edu.bjtu.weibo.model;
 
-public class WeiboSR {
-	private Weibo weibo;
+public class BaseContentSR {
+	private BaseContent baseContent;
 	private int[] highlighIndex;
-	public Weibo getWeibo() {
-		return weibo;
-	}
-	public void setWeibo(Weibo weibo) {
-		this.weibo = weibo;
-	}
+	
 	public int[] getHighlighIndex() {
 		return highlighIndex;
 	}
 	public void setHighlighIndex(int[] highlighIndex) {
 		this.highlighIndex = highlighIndex;
+	}
+	public BaseContent getBaseContent() {
+		return baseContent;
+	}
+	public void setBaseContent(BaseContent baseContent) {
+		this.baseContent = baseContent;
 	}
 }
