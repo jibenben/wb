@@ -2,6 +2,8 @@ package cn.edu.bjtu.weibo.service;
 
 import java.util.List;
 
+import cn.edu.bjtu.weibo.model.User;
+
 /**
  * Recommend some user for a user, it depends on your recommendation algorithm.
  * 
@@ -17,5 +19,5 @@ public interface RecommendUsersService {
 	 * @param numberPerPage
 	 * @return
 	 */
-	List<?> getRecommendUserIdList(int userId, int pageIndex, int numberPerPage);
+	List<User> getRecommendUserList(int userId, int pageIndex, int numberPerPage);
 }

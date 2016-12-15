@@ -2,6 +2,8 @@ package cn.edu.bjtu.weibo.service;
 
 import java.util.List;
 
+import cn.edu.bjtu.weibo.model.Weibo;
+
 /**
  * Recommend some weibo for a given user, it depends on the recommendation algorithm
  * 
@@ -17,5 +19,5 @@ public interface RecommendWeiboService {
 	 * @param userId
 	 * @return
 	 */
-	List<?> getRecommentWeiboIdList(int userId, int pageIndex, int numberPerPage);
+	List<Weibo> getRecommentWeiboList(int userId, int pageIndex, int numberPerPage);
 }
