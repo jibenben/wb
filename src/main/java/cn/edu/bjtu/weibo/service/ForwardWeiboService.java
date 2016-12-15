@@ -2,11 +2,31 @@ package cn.edu.bjtu.weibo.service;
 
 import java.util.List;
 
-import cn.edu.bjtu.weibo.model.User;
-import cn.edu.bjtu.weibo.model.Weibo;
+/**
+ * All the operation are related to forward weibo
+ * @author Liu Jinfeng
+ *
+ */
 
 public interface ForwardWeiboService {
-	public int	getForwardNumber(Weibo weibo) ;//获取转发人数
-	public List<User>	getForwardList(Weibo weibo); //转发列表
-	public boolean	forwardWeiboAction(Weibo weibo,User user);//转发动作
+	/**
+	 * high frequency usage, it will show under some weibo
+	 * @param weiboId
+	 * @return
+	 */
+	int getForwardNumber(int weiboId);
+	/**
+	 * when a user want to see all the user id who forward this weibo
+	 * it needs pagination
+	 * @param weiboId
+	 * @return
+	 */
+	List<?> getForwardUserIdList(int weiboId, int pageIndex, int numberPerPage);
+	/**
+	 * When a user do forward weibo action
+	 * @param userId
+	 * @param weiboId
+	 * @return
+	 */
+	boolean	forwardWeiboAction(int userId, int weiboId);
 }
