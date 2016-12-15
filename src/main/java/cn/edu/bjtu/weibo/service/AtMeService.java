@@ -9,11 +9,13 @@ import java.util.List;
  *
  */
 
-public interface AtUserService {
+public interface AtMeService {
 	/**
-	 * 
+	 * it needs pagination
 	 * @param userId
+	 * @param pageIndex
+	 * @param numberPerPage
 	 * @return
 	 */
-	List<?> getAtMeWeiboList(int userId);
+	List<?> getAtMeWeiboIdList(int userId, int pageIndex, int numberPerPage);
 }
