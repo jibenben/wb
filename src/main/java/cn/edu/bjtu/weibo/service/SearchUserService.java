@@ -3,10 +3,19 @@ package cn.edu.bjtu.weibo.service;
 import java.util.List;
 
 /**
- * when you search user by user's name
+ * When user want to search some user according to the given name
+ * 
+ * @author Liu Jinfeng
+ *
  */
-import cn.edu.bjtu.weibo.model.User;
 
 public interface SearchUserService {
-	 List<User> SearchUser(String username);
+	/**
+	 * it needs pagination
+	 * @param username
+	 * @param pageIndex
+	 * @param numberPerPage
+	 * @return
+	 */
+	List<?> getSearchedUserIdList(String username, int pageIndex, int numberPerPage);
 }
