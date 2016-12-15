@@ -8,17 +8,10 @@ package cn.edu.bjtu.weibo.service;
 public interface LikeActionService {
 	
 	/**
-	 * Like weibo
+	 * Like weibo or comment
 	 * @param userId
 	 * @param weiboId
 	 * @return
 	 */
-	boolean LikeWeiboAction(int userId ,int weiboId);
-	/**
-	 * Like comment
-	 * @param userId
-	 * @param commentId
-	 * @return
-	 */
-	boolean LikeCommentAction(int userId ,int commentId);
+	boolean LikeWeiboOrCommentAction(int userId ,int weiboOrCommentId);
 }
