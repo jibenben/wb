@@ -21,7 +21,7 @@ public interface WeiboPictureServie {
 	List<Picture> getWeiboPictureList(String weiboId);
 	
 	/**
-	 * Upload pictures for weibo
+	 * Upload pictures for weibo,it can call pictureservice.
 	 * @param weiboId
 	 * @param multipartFile
 	 * @return
