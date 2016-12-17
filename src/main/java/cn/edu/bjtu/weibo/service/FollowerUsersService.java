@@ -11,7 +11,7 @@ import cn.edu.bjtu.weibo.model.User;
  *
  */
 
-public interface FansUsersService {
+public interface FollowerUsersService {
 	/**
 	 * it needs pagination
 	 * @param userId
@@ -19,7 +19,7 @@ public interface FansUsersService {
 	 * @param numberPerPage
 	 * @return
 	 */
-	List<String> getFansUserIdList(String userId, int pageIndex, int numberPerPage);
+	List<String> getFollowerUserIdList(String userId, int pageIndex, int numberPerPage);
 	
 	/**
 	 * it needs pagination
@@ -28,5 +28,5 @@ public interface FansUsersService {
 	 * @param numberPerPage
 	 * @return
 	 */
-	List<User> getFansUserList(String userId, int pageIndex, int numberPerPage);
+	List<User> getFollowerUserList(String userId, int pageIndex, int numberPerPage);
 }

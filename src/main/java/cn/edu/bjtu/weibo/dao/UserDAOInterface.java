@@ -31,20 +31,20 @@ public interface UserDAOInterface {
 	public String getWeiBoNumber(String id);
 	public String updateWeiBoNumber(String id);
 	
-	public String getFansNumber(String id);
-	public String updateFansNumber(String id);
+	public String getFollowerNumber(String id);
+	public String updateFollowerNumber(String id);
 	
-	public String getAttentionNumber(String id);
-	public String updateAttentionNumber(String id);
+	public String getFollowingNumber(String id);
+	public String updateFollowingNumber(String id);
 	
 	
-	public List<String> getFans(String id);  //返回一个UserID的List
-	public boolean insertFans(String id);
-	public boolean deleteFans(String id);
+	public List<String> getFollower(String id);  //返回一个UserID的List
+	public boolean insertFollower(String id);
+	public boolean deleteFollower(String id);
 	
-	public List<String> getAttention(String id);  //返回一个UserID的List
-	public boolean insertAttentions(String id);
-	public boolean deleteAttentions(String id);
+	public List<String> getFollowing(String id);  //返回一个UserID的List
+	public boolean insertFollowing(String id);
+	public boolean deleteFollowing(String id);
 	
 	public List<String> getPircurlOr(String id);  //返回一个PircurlOr的List
 	public List<String> getPicurlTh(String id);  //返回一个PicurlTh的List

@@ -7,7 +7,7 @@ package cn.edu.bjtu.weibo.service;
  *
  */
 
-public interface AttentionNumberService {
+public interface FollowingNumberService {
 	/**
 	 * @param userId
 	 * @return

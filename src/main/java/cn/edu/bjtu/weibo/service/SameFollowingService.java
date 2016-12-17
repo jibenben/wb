@@ -11,7 +11,7 @@ import cn.edu.bjtu.weibo.model.User;
  *
  */
 
-public interface SameAttentionService {
+public interface SameFollowingService {
 	/**
 	 * it needs pagination
 	 * @param userId
@@ -20,5 +20,5 @@ public interface SameAttentionService {
 	 * @param numberPerPage
 	 * @return
 	 */
-	List<User> getSameAttentionUserList(String userId,String otherUserId, int pageIndex, int numberPerPage);
+	List<User> getSameFollowingUserList(String userId,String otherUserId, int pageIndex, int numberPerPage);
 }

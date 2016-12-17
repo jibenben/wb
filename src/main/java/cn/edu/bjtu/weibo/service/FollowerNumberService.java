@@ -7,11 +7,11 @@ package cn.edu.bjtu.weibo.service;
  *
  */
 
-public interface FansNumberService {
+public interface FollowerNumberService {
 	/**
 	 * 
 	 * @param userId
 	 * @return
 	 */
-	int getFansmNuber(String userId);
+	int getFollowerNumber(String userId);
 }

@@ -9,7 +9,7 @@ import cn.edu.bjtu.weibo.model.User;
  * @author Liu Jinfeng
  *
  */
-public interface AttentionUsersService {
+public interface FollowingUsersService {
 	/**
 	 * 
 	 * @param userId
@@ -17,7 +17,7 @@ public interface AttentionUsersService {
 	 * @param numberPerPage
 	 * @return the userId collection for more flexible
 	 */
-	List<String> getAttentionUserIdList(String userId, int pageIndex, int numberPerPage);
+	List<String> getFollowingUserIdList(String userId, int pageIndex, int numberPerPage);
 	/**
 	 * 
 	 * @param userId
