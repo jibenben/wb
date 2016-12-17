@@ -17,7 +17,7 @@ public interface AttentionUsersService {
 	 * @param numberPerPage
 	 * @return the userId collection for more flexible
 	 */
-	List<?> getAttentionUserIdList(int userId, int pageIndex, int numberPerPage);
+	List<String> getAttentionUserIdList(String userId, int pageIndex, int numberPerPage);
 	/**
 	 * 
 	 * @param userId
@@ -25,5 +25,5 @@ public interface AttentionUsersService {
 	 * @param numberPerPage
 	 * @return the user which only use for display all current user`s interest users
 	 */
-	List<User> getAttentionUserList(int userId, int pageIndex, int numberPerPage);
+	List<User> getAttentionUserList(String userId, int pageIndex, int numberPerPage);
 }

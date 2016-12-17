@@ -19,5 +19,5 @@ public interface RecommendWeiboService {
 	 * @param userId
 	 * @return
 	 */
-	List<Weibo> getRecommentWeiboList(int userId, int pageIndex, int numberPerPage);
+	List<Weibo> getRecommentWeiboList(String userId, int pageIndex, int numberPerPage);
 }

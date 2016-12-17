@@ -19,5 +19,5 @@ public interface RecommendUsersService {
 	 * @param numberPerPage
 	 * @return
 	 */
-	List<User> getRecommendUserList(int userId, int pageIndex, int numberPerPage);
+	List<User> getRecommendUserList(String userId, int pageIndex, int numberPerPage);
 }

@@ -19,5 +19,5 @@ public interface AtMeService {
 	 * @param numberPerPage
 	 * @return
 	 */
-	List<BaseContent> getAtMeContentList(int userId, int pageIndex, int numberPerPage);
+	List<BaseContent> getAtMeContentList(String userId, int pageIndex, int numberPerPage);
 }

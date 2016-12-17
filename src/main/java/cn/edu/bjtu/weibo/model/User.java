@@ -1,23 +1,16 @@
 package cn.edu.bjtu.weibo.model;
 public class User {
-	private int id;
 	private String introduction;
 	private String name;
 	private String phoneNumber;
 	private String sex;
-	private int age;
+	private String age;
 	private String birthday;
 	private String location;
 	private String email;
 	private String qq;
 	private String education;
-	private int lastWeiboId;
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
+	private String lastWeiboId;
 	public String getName() {
 		return name;
 	}
@@ -36,10 +29,10 @@ public class User {
 	public void setSex(String sex) {
 		this.sex = sex;
 	}
-	public int getAge() {
+	public String getAge() {
 		return age;
 	}
-	public void setAge(int age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 	public String getBirthday() {
@@ -78,10 +71,10 @@ public class User {
 	public void setIntroduction(String introduction) {
 		this.introduction = introduction;
 	}
-	public int getLastWeiboId() {
+	public String getLastWeiboId() {
 		return lastWeiboId;
 	}
-	public void setLastWeiboId(int lastWeiboId) {
+	public void setLastWeiboId(String lastWeiboId) {
 		this.lastWeiboId = lastWeiboId;
 	}
 }

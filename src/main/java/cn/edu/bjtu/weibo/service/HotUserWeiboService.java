@@ -15,10 +15,10 @@ import cn.edu.bjtu.weibo.model.Weibo;
 public interface HotUserWeiboService {
 	/**
 	 * 
-	 * @param user
+	 * @param userId
 	 * @param pageIndex
 	 * @param numberPerPage
 	 * @return
 	 */
-	List<Weibo> HotUserWeiboList(User user, int pageIndex, int numberPerPage);
+	List<Weibo> HotUserWeiboList(String userId, int pageIndex, int numberPerPage);
 }

@@ -21,82 +21,82 @@ public interface UserProfileService {
 	 * @param userId
 	 * @return
 	 */
-	User getUserProfile(int userId);
+	User getUserProfile(String userId);
 	/**
 	 * Update user name
 	 * @param userId
 	 * @param userName
 	 * @return
 	 */
-	boolean updateUserName(int userId, String userName);
+	boolean updateUserName(String userId, String userName);
 	/**
 	 * Update user introduction
 	 * @param userId
 	 * @param introduction
 	 * @return
 	 */
-	boolean updateUserIntroduction(int userId, String introduction);
+	boolean updateUserIntroduction(String userId, String introduction);
 	/**
 	 * Update user phone number
 	 * @param userId
 	 * @param phoneNumber
 	 * @return
 	 */
-	boolean updateUserPhoneNumber(int userId, String phoneNumber);
+	boolean updateUserPhoneNumber(String userId, String phoneNumber);
 	/**
 	 * Update user sex
 	 * @param userId
 	 * @param sex
 	 * @return
 	 */
-	boolean updateUserSex(int userId, String sex);
+	boolean updateUserSex(String userId, String sex);
 	/**
 	 * Update user age
 	 * @param userId
 	 * @param age
 	 * @return
 	 */
-	boolean updateUserAge(int userId, int age);
+	boolean updateUserAge(String userId, String age);
 	/**
 	 * Update user birthday
 	 * @param userId
 	 * @param birthday
 	 * @return
 	 */
-	boolean updateUserBirthday(int userId, String birthday);
+	boolean updateUserBirthday(String userId, String birthday);
 	/**
 	 * Update user location
 	 * @param userId
 	 * @param location
 	 * @return
 	 */
-	boolean updateUserLocation(int userId, String location);
+	boolean updateUserLocation(String userId, String location);
 	/**
 	 * Update user email address
 	 * @param userId
 	 * @param email
 	 * @return
 	 */
-	boolean updateUserEmail(int userId, String email);
+	boolean updateUserEmail(String userId, String email);
 	/**
 	 * Update user qq
 	 * @param userId
 	 * @param qq
 	 * @return
 	 */
-	boolean updateUserQQ(int userId, String qq);
+	boolean updateUserQQ(String userId, String qq);
 	/**
 	 * Update user education
 	 * @param userId
 	 * @param education
 	 * @return
 	 */
-	boolean updateUserEducation(int userId, String education);
+	boolean updateUserEducation(String userId, String education);
 	/**
 	 * Update last weibo Id
 	 * @param userId
 	 * @param lastWeiboId
 	 * @return
 	 */
-	boolean updateUserLastWeiboId(int userId, String lastWeiboId);
+	boolean updateUserLastWeiboId(String userId, String lastWeiboId);
 }

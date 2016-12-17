@@ -14,7 +14,7 @@ public interface MessageToMeService {
 	 * @param toUserId
 	 * @return
 	 */
-	boolean atMeInform(int fromUserId ,int toUserId);
+	boolean atMeInform(String fromUserId ,String toUserId);
 	/**
 	 * When a user comment another user`s weibo or comment, that user should be notified
 	 * @param fromUserId
@@ -23,7 +23,7 @@ public interface MessageToMeService {
 	 * @param weiboId
 	 * @return
 	 */
-	boolean commentMyWeiboOrCommentInform(int fromUserId, int toUserId, int commentId, int weiboOrCommentId);
+	boolean commentMyWeiboOrCommentInform(String fromUserId, String toUserId, String commentId, String weiboOrCommentId);
 	/**
 	 * When a user like some user`s weibo or comments, that user should be notified
 	 * @param fromUserId

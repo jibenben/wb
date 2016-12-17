@@ -16,19 +16,19 @@ public interface ForwardWeiboService {
 	 * @param weiboId
 	 * @return
 	 */
-	int getForwardNumber(int weiboId);
+	int getForwardNumber(String weiboId);
 	/**
 	 * when a user want to see all the user who forward this weibo
 	 * it needs pagination
 	 * @param weiboId
 	 * @return
 	 */
-	List<User> getForwardUserIdList(int weiboId, int pageIndex, int numberPerPage);
+	List<User> getForwardUserIdList(String weiboId, int pageIndex, int numberPerPage);
 	/**
 	 * When a user do forward weibo action
 	 * @param userId
 	 * @param weiboId
 	 * @return
 	 */
-	boolean	forwardWeiboAction(int userId, int weiboId);
+	boolean	forwardWeiboAction(String userId, String weiboId);
 }

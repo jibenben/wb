@@ -16,12 +16,12 @@ public interface FavoriteWeiboService {
 	 * @param userId
 	 * @return
 	 */
-	List<Weibo>	getFavoriteWeiboList(int userId, int pageIndex, int numberPerPage);
+	List<Weibo>	getFavoriteWeiboList(String userId, int pageIndex, int numberPerPage);
 	/**
 	 * 
 	 * @param userId
 	 * @param weiboId
 	 * @return
 	 */
-	boolean	favoriteWeiboAction(int userId, int weiboId);
+	boolean	favoriteWeiboAction(String userId, int weiboId);
 }

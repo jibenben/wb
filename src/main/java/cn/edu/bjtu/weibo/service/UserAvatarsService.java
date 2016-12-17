@@ -18,5 +18,5 @@ public interface UserAvatarsService {
 	 * @param numberPerPage
 	 * @return
 	 */
-	List<Picture> getUserAvatarList(int userId, int pageIndex, int numberPerPage);
+	List<Picture> getUserAvatarList(String userId, int pageIndex, int numberPerPage);
 }

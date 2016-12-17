@@ -18,19 +18,19 @@ public interface RelationManageService {
 	 * @param userIdfollowed
 	 * @return
 	 */
-	boolean followAction(int userId, int followedUserId);
+	boolean followAction(String userId, String followedUserId);
 	/**
 	 * you want to unfollow someone
 	 * @param userId
 	 * @param userIdunfollowed
 	 * @return
 	 */
-	boolean unfollowAction(int userId, int unfollowedUserId);
+	boolean unfollowAction(String userId, String unfollowedUserId);
 	/**
 	 * the one who follow you, but you don`t want him to be your fans, you can remove him.
 	 * @param userId
 	 * @param userIddelete
 	 * @return
 	 */
-	boolean removeFansAction(int userId, int removedUserId);
+	boolean removeFansAction(String userId, String removedUserId);
 }

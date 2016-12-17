@@ -19,7 +19,7 @@ public interface FansUsersService {
 	 * @param numberPerPage
 	 * @return
 	 */
-	List<?> getFansUserIdList(int userId, int pageIndex, int numberPerPage);
+	List<String> getFansUserIdList(String userId, int pageIndex, int numberPerPage);
 	
 	/**
 	 * it needs pagination
@@ -28,5 +28,5 @@ public interface FansUsersService {
 	 * @param numberPerPage
 	 * @return
 	 */
-	List<User> getFansUserList(int userId, int pageIndex, int numberPerPage);
+	List<User> getFansUserList(String userId, int pageIndex, int numberPerPage);
 }

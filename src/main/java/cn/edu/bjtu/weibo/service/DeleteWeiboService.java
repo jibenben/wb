@@ -14,5 +14,5 @@ public interface DeleteWeiboService {
 	 * @param weiboId
 	 * @return
 	 */
-	boolean deleteWeibo(int userId,int weiboId);
+	boolean deleteWeibo(String userId,String weiboId);
 }

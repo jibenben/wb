@@ -15,7 +15,9 @@ public interface LikedContentService {
 	/**
 	 * 
 	 * @param userId
+	 * @param pageIndex
+	 * @param numberPerPage
 	 * @return
 	 */
-	List<BaseContent> getLikedContentList(int userId);
+	List<BaseContent> getLikedContentList(String userId, int pageIndex, int numberPerPage);
 }

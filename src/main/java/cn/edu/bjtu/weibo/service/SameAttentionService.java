@@ -20,5 +20,5 @@ public interface SameAttentionService {
 	 * @param numberPerPage
 	 * @return
 	 */
-	List<User> getSameAttentionUserList(int userId,int otherUserId, int pageIndex, int numberPerPage);
+	List<User> getSameAttentionUserList(String userId,String otherUserId, int pageIndex, int numberPerPage);
 }

@@ -18,5 +18,5 @@ public interface UserSendedPictureServie {
 	 * @param numberPerPage
 	 * @return
 	 */
-	List<Picture> getUserSendedPictureList(int userId, int pageIndex, int numberPerPage);
+	List<Picture> getUserSendedPictureList(String userId, int pageIndex, int numberPerPage);
 }

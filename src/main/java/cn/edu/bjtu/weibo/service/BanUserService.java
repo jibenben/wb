@@ -14,12 +14,12 @@ public interface BanUserService {
 	 * @param banedUserId
 	 * @return
 	 */
-	boolean banUser(int userId, int banedUserId);
+	boolean banUser(String userId, String banedUserId);
 	/**
 	 * The action when userId unban banedUserId
 	 * @param userId
 	 * @param banedUserId
 	 * @return
 	 */
-	boolean unbanUser(int userId, int banedUserId);
+	boolean unbanUser(String userId, String banedUserId);
 }

@@ -10,5 +10,5 @@ public interface LogoutService {
 	 * @param userId
 	 * @return
 	 */
-	boolean logout(int userId);
+	boolean logout(String userId);
 }

@@ -20,7 +20,7 @@ public interface WeiboListService {
 	 * @param numberPerPage : for example, 20 or 30 weibos for each page.
 	 * @return
 	 */
-	List<Weibo> getWeiboList(int userId, int pageIndex, int numberPerPage);
+	List<Weibo> getWeiboList(String userId, int pageIndex, int numberPerPage);
 	
 	/**
 	 * When a userId is not specified, it will return the random list of weibos
@@ -32,5 +32,5 @@ public interface WeiboListService {
 	 * @param numberPerPage : for example, 20 or 30 weibos for each page.
 	 * @return
 	 */
-	List<Weibo> getWeiboList(int pageIndex, int numberPerPage);
+	List<Weibo> getWeiboList(String pageIndex, int numberPerPage);
 }

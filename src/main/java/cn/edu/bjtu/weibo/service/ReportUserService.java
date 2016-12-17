@@ -14,5 +14,5 @@ public interface ReportUserService {
 	 * @param reportedUserId
 	 * @return
 	 */
-	boolean ReportUser(int userId, int reportedUserId);
+	boolean ReportUser(String userId, String reportedUserId);
 }

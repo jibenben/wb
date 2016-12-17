@@ -18,5 +18,5 @@ public interface TopicService {
 	 * @param pagePerPage
 	 * @return
 	 */
-	List<BaseContent> getWeiboOrCommentListUnderTopic(int topicId, int pageIndex, int pagePerPage);
+	List<BaseContent> getWeiboOrCommentListUnderTopic(String topicId, int pageIndex, int pagePerPage);
 }

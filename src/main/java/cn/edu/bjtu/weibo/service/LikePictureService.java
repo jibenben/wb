@@ -13,5 +13,5 @@ public interface LikePictureService {
 	 * @param picId
 	 * @return
 	 */
-	boolean LikePictureAction(int userId ,int picId);
+	boolean LikePictureAction(String userId ,String picId);
 }

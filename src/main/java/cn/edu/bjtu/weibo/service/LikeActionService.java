@@ -13,5 +13,5 @@ public interface LikeActionService {
 	 * @param weiboId
 	 * @return
 	 */
-	boolean LikeWeiboOrCommentAction(int userId ,int weiboOrCommentId);
+	boolean LikeWeiboOrCommentAction(String userId ,String weiboOrCommentId);
 }

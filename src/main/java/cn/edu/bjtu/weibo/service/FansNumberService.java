@@ -13,5 +13,5 @@ public interface FansNumberService {
 	 * @param userId
 	 * @return
 	 */
-	int getFansmNuber(int userId);
+	int getFansmNuber(String userId);
 }

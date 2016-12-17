@@ -16,5 +16,5 @@ public interface SearchUserContentService {
 	 * @param userId
 	 * @return
 	 */
-	List<BaseContentSR> getSearchedUserWeiboList(int userId, String keyword, int pageIndex, int numberPerPage);
+	List<BaseContentSR> getSearchedUserWeiboList(String userId, String keyword, int pageIndex, int numberPerPage);
 }

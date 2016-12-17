@@ -12,5 +12,5 @@ public interface AttentionNumberService {
 	 * @param userId
 	 * @return
 	 */
-	int getAttentionNumber(int userId);
+	int getAttentionNumber(String userId);
 }
