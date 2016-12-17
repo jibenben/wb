@@ -13,11 +13,4 @@ public interface BanedKeywordService {
 	 * @return
 	 */
 	boolean removeBanedKeyword(String word);
-	/**
-	 * check if a weiboContent contain baned keyword, if true, this weibo won`t be sended.
-	 * and also inform user to notice.
-	 * @param word
-	 * @return
-	 */
-	boolean isBanedKeywordInside(String weiboContent);
 }
