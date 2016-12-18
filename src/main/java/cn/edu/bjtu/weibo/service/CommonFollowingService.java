@@ -11,7 +11,7 @@ import cn.edu.bjtu.weibo.model.User;
  *
  */
 
-public interface SameFollowingService {
+public interface CommonFollowingService {
 	/**
 	 * it needs pagination
 	 * @param userId
@@ -20,5 +20,5 @@ public interface SameFollowingService {
 	 * @param numberPerPage
 	 * @return
 	 */
-	List<User> getSameFollowingUserList(String userId,String otherUserId, int pageIndex, int numberPerPage);
+	List<User> getCommonFollowingUserList(String userId,String otherUserId, int pageIndex, int numberPerPage);
 }
