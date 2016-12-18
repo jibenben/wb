@@ -25,5 +25,5 @@ public interface FollowingUsersService {
 	 * @param numberPerPage
 	 * @return the user which only use for display all current user`s interest users
 	 */
-	List<User> getAttentionUserList(String userId, int pageIndex, int numberPerPage);
+	List<User> getFollowingUserList(String userId, int pageIndex, int numberPerPage);
 }

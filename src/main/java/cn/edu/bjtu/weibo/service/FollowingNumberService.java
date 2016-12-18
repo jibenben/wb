@@ -12,5 +12,5 @@ public interface FollowingNumberService {
 	 * @param userId
 	 * @return
 	 */
-	int getAttentionNumber(String userId);
+	int getFollowingNumber(String userId);
 }
