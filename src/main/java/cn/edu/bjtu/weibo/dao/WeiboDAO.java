@@ -2,7 +2,7 @@ package cn.edu.bjtu.weibo.dao;
 
 import java.util.List;
 
-public interface WeiboDAOInterface {
+public interface WeiboDAO {
 	public String getOwner(String weiboId);
 	
 	public String getContent(String weiboId);

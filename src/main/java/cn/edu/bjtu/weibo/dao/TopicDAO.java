@@ -4,7 +4,7 @@ import java.util.List;
 
 import cn.edu.bjtu.weibo.model.Topic;
 
-public interface TopicDAOInterface {
+public interface TopicDAO {
 	public boolean insertNewTopic(Topic t);
 	
 	List<String> getUserList(String topicid);

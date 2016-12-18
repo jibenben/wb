@@ -4,7 +4,7 @@ import java.util.List;
 
 import cn.edu.bjtu.weibo.model.User;
 
-public interface UserDAOInterface {
+public interface UserDAO {
 	public boolean insertNewUser(User user);
 	
 	//ÉèÖÃÓÃ»§×´Ì¬
