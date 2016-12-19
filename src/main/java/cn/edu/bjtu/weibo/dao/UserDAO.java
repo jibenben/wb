@@ -108,11 +108,18 @@ public interface UserDAO {
 	boolean deleteLikeWeibo(String userId, String weiboId);
 	
 	/**
-	 * Comment weibo related
+	 * comment on weibo related
 	 */
-	List<String> getCommentWeibo(String userId, int pageIndex, int pagePerNumber);  
-	boolean insertCommentWeibo(String userId, String weiboId);
-	boolean deleteCommentWeibo(String userId, String weiboId);
+	List<String> getCommentOnWeibo(String userId, int pageIndex, int pagePerNumber);  
+	boolean insertCommentOnWeibo(String userId, String weiboId);
+	boolean deleteCommentOnWeibo(String userId, String weiboId);
+	
+	/**
+	 * comment on comment related
+	 */
+	List<String> getCommentOnComment(String userId, int pageIndex, int pagePerNumber);  
+	boolean insertCommentOnComment(String userId, String commentId);
+	boolean deleteCommentOnComment(String userId, String commentId);
 	
 	
 	/**
