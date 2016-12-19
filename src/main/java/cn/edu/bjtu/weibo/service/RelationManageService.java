@@ -32,5 +32,5 @@ public interface RelationManageService {
 	 * @param userIddelete
 	 * @return
 	 */
-	boolean removeFansAction(String userId, String removedUserId);
+	boolean removeFollowerAction(String userId, String removedUserId);
 }
