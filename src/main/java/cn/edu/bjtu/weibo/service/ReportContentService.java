@@ -13,5 +13,14 @@ public interface ReportContentService {
 	 * @param weiboId
 	 * @return
 	 */
-	boolean reportWeiboOrComment(String userId,String weiboOrCommentId);
+	boolean reportWeibo(String userId,String weiboId);
+	
+	/**
+	 * 
+	 * @param userId
+	 * @param commentId
+	 * @return
+	 */
+	
+	boolean reportComment(String userId, String commentId);
 }
