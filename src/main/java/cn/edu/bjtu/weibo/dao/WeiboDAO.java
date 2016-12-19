@@ -20,9 +20,9 @@ public interface WeiboDAO {
 	
 	public String getForwardNumber(String weiboId);
 	
-	public List<String> getLikeLIst(String weiboId);
+	public List<String> getLikeLIst(String weiboId, int pageIndex, int numberPerPage);
 	
-	public List<String> getForwardList(String weiboId);
+	public List<String> getForwardList(String weiboId, int pageIndex, int numberPerPage);
 	
-	public List<String> getCommentList(String weiboId);
+	public List<String> getCommentList(String weiboId, int pageIndex, int numberPerPage);
 }
