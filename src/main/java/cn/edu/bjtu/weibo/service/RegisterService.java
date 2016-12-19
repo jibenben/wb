@@ -15,4 +15,10 @@ public interface RegisterService {
 	 * @return
 	 */
 	boolean registerNewUser(String username, String password);
+	/**
+	 * 
+	 * @param username
+	 * @return
+	 */
+	boolean isUserNameExisted(String username);
 }
