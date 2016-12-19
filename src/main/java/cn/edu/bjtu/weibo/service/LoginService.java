@@ -12,5 +12,12 @@ public interface LoginService {
 	 * @param password
 	 * @return
 	 */
-	boolean loginService(String usename, String password);
+	String getLoginUserId(String usename, String password);
+	/**
+	 * 
+	 * @param username
+	 * @param password
+	 * @return
+	 */
+	boolean isUserExisted(String username, String password);
 }
