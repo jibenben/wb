@@ -5,67 +5,67 @@ import java.util.List;
 import cn.edu.bjtu.weibo.model.User;
 
 public interface UserDAO {
-	public boolean insertNewUser(User user);
+	String insertNewUser(User user);
 	
 	//设置用户状态
-	public boolean setState(String id, boolean s);
+	boolean setState(String id, boolean s);
 	
-	public String getName(String id);
-	public String updateName(String id);
+	String getUserName(String userId);
+	boolean updateUserName(String userId, String userName);
 	
-	public String getPassword(String id);
-	public String updatePassword(String id);
+	String getUserIntroduction(String userId);
+	boolean updateUserIntroduction(String userId, String introduction);
 	
-	public String getLocation(String id);
-	public String updateLocation(String id);
+	String getLocation(String userId);
+	String updateLocation(String userId, String location);
 	
-	public String getBirthday(String id);
-	public String updateBirthday(String id);
+	String getBirthday(String userId);
+	String updateBirthday(String userId, String birthday);
 	
-	public String getSex(String id);
-	public String updateSex(String id);
+	String getSex(String userId);
+	String updateSex(String userId, String sex);
 	
-	public String getLastTime(String id);
-	public String updateLastName(String id);
+	String getLastWeiboId(String userId);
+	String updateLastWeiboId(String userId, String weiboId);
 	
-	public String getWeiBoNumber(String id);
-	public String updateWeiBoNumber(String id);
+	String getWeiboNumber(String userId);
+	String updateWeiboNumber(String userId, String weiboNumber);
 	
-	public String getFollowerNumber(String id);
-	public String updateFollowerNumber(String id);
+	String getFollowerNumber(String userId);
+	String updateFollowerNumber(String userId, String followerNumber);
 	
-	public String getFollowingNumber(String id);
-	public String updateFollowingNumber(String id);
+	String getFollowingNumber(String userId);
+	String updateFollowingNumber(String userId, String followeingNumber);
 	
 	
-	public List<String> getFollower(String id);  //返回一个UserID的List
-	public boolean insertFollower(String id);
-	public boolean deleteFollower(String id);
+	List<String> getFollowers(String userId);  //返回一个UserID的List
+	boolean insertFollower(String userId, String followerId);
+	boolean deleteFollower(String userId, String followerId);
 	
-	public List<String> getFollowing(String id);  //返回一个UserID的List
-	public boolean insertFollowing(String id);
-	public boolean deleteFollowing(String id);
+	List<String> getFollowing(String userId);  //返回一个UserID的List
+	boolean insertFollowing(String userId, String followingId);
+	boolean deleteFollowing(String userId, String followingId);
 	
-	public List<String> getPircurlOr(String id);  //返回一个PircurlOr的List
-	public List<String> getPicurlTh(String id);  //返回一个PicurlTh的List
-	public boolean insertPicurl(String id); //同时插入图片的原图和缩略
-	public boolean deletePicurl(String id); //同时删除图片的原图和缩略
+	List<String> getPircurlOr(String userId);  //返回一个PircurlOr的List
+	List<String> getPicurlTh(String userId);  //返回一个PicurlTh的List
+	boolean insertPicurl(String userId, String picId); //同时插入图片的原图和缩略
+	boolean deletePicurl(String userId, String picId); //同时删除图片的原图和缩略
 	
-	public List<String> getLikePicurlOr(String id);  //返回一个LikePircurlOr的List
-	public List<String> getLikePicurlTh(String id);  //返回一个LikePircurlOr的List
-	public boolean insertLikePicurl(String id);  //同时插入点赞过的图片的原图和缩略
-	public boolean deleteLikePicurl(String id);  //同时删除点赞过的图片的原图和缩略
+	List<String> getLikePicurlOr(String userId);  //返回一个LikePircurlOr的List
+	List<String> getLikePicurlTh(String userId);  //返回一个LikePircurlOr的List
+	boolean insertLikePicurl(String userId, String picId);  //同时插入点赞过的图片的原图和缩略
+	boolean deleteLikePicurl(String userId, String picId);  //同时删除点赞过的图片的原图和缩略
 	
-	public List<String> getForwordWeibo(String id);  //返回一个WeiboID的List
-	public boolean insertForwordWeibo(String id);
-	public boolean deleteForwordWeibo(String id);
+	List<String> getForwordWeibo(String userId);  //返回一个WeiboID的List
+	boolean insertForwordWeibo(String userId, String weiboId);
+	boolean deleteForwordWeibo(String userId, String weiboId);
 	
-	public List<String> getLikeWeibo(String id);  //返回一个WeiboID的List
-	public boolean insertLikeWeibo(String id);
-	public boolean deleteLikeWeibo(String id);
+	List<String> getLikeWeibo(String userId);  //返回一个WeiboID的List
+	boolean insertLikeWeibo(String userId, String weiboId);
+	boolean deleteLikeWeibo(String userId, String weiboId);
 	
-	public List<String> getCommentWeibo(String id);  //返回一个WeiboID的List
-	public boolean insertCommentWeibo(String id);
-	public boolean deleteCommentWeibo(String id);
+	List<String> getCommentWeibo(String userId);  //返回一个WeiboID的List
+	boolean insertCommentWeibo(String userId, String weiboId);
+	boolean deleteCommentWeibo(String userId, String weiboId);
 	
 }
