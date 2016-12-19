@@ -1,6 +1,7 @@
 package cn.edu.bjtu.weibo.service;
 
-import cn.edu.bjtu.weibo.model.BaseContent;
+import cn.edu.bjtu.weibo.model.Comment;
+import cn.edu.bjtu.weibo.model.Weibo;
 
 /**
  * this work for both weibo and comment, usually some one like to upload some picture in the same time
@@ -11,8 +12,16 @@ import cn.edu.bjtu.weibo.model.BaseContent;
 public interface SendContentSevice {
 	/**
 	 * 
-	 * @param weiboOrComment
+	 * @param userId
+	 * @param weibo
 	 * @return
 	 */
-	boolean sendWeiboOrComment(BaseContent weiboOrComment);
+	boolean sendWeibo(String userId, Weibo weibo);
+	/**
+	 * 
+	 * @param userId
+	 * @param comment
+	 * @return
+	 */
+	boolean sendComment(String userId, Comment comment);
 }
