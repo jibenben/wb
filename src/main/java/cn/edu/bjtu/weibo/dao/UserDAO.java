@@ -145,24 +145,24 @@ public interface UserDAO {
 	/*
 	 * User msg @ me related
 	 */
-	List<String> getWeiboAtMeUnread(String userId, int pageIndex, int pagePerNumber);
 	List<String> getWeiboAtMeRead(String userId, int pageIndex, int pagePerNumber);
+	String getNewComingWeiboAtMeMessageNumber(String userId);
 	boolean insertWeiboAtMe(String userId, String weiboId);
 	boolean deleteWeiboAtMe(String userId, String weiboId);
 	
 	/*
 	 * User msg comment me related
 	 */
-	List<String> getWeiboCommentMeUnread(String userId, int pageIndex, int pagePerNumber);
-	List<String> getWeiboCommentMeRead(String userId, int pageIndex, int pagePerNumber);
+	List<String> getWeiboCommentMeMessage(String userId, int pageIndex, int pagePerNumber);
+	String getNewComingWeiboCommentMeMessageNumber(String userId);
 	boolean insertWeiboCommentMe(String userId, String weiboId);
 	boolean deleteWeiboCommentMe(String userId, String weiboId);
 	
 	/*
 	 * User msg like me related
 	 */
-	List<String> getWeiboLikeMeUnread(String userId, int pageIndex, int pagePerNumber);
 	List<String> getWeiboLikeMeRead(String userId, int pageIndex, int pagePerNumber);
+	String getNewComingWeiboLikeMeMessageNumber(String userId);
 	boolean insertWeiboLikeMe(String userId, String weiboId);
 	boolean deleteWeiboLikeMe(String userId, String weiboId);
 }
