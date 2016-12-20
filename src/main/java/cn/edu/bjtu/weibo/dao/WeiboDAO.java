@@ -50,11 +50,13 @@ public interface WeiboDAO {
 	  * @return
 	  */
 	 
-	 List<String> getLikeLIst(String weiboId, int pageIndex, int numberPerPage);
+	 List<String> getLikeLst(String weiboId, int pageIndex, int numberPerPage);
 	
 	 List<String> getForwardList(String weiboId, int pageIndex, int numberPerPage);
 	
 	 List<String> getCommentList(String weiboId, int pageIndex, int numberPerPage);
 	
-	 boolean deleteWeibo(String WeiboId);
+	 boolean deleteWeibo(String weiboId);
+	 
+	 boolean deleteCommentFromWeibo(String fromWeiboId, String commentId);
 }
