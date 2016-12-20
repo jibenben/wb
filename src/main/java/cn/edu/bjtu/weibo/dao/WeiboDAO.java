@@ -5,21 +5,51 @@ import java.util.List;
 public interface WeiboDAO {
 	 String getOwner(String weiboId);
 	
+	 /**
+	  * weibo content related
+	  * @param weiboId
+	  * @return
+	  */
+	 
 	 String getContent(String weiboId);
 	 boolean updateContent(String weiboId, String content);
 	
 	 String getTime(String weiboId);
-	
+	 
+	 /**
+	  * weibo attached picture related operation
+	  * @param weiboId
+	  * @return
+	  */
+	 
 	 List<String> getWeiboPicurlOr(String weiboId);
 	
 	 List<String> getWeiboPicurlTh(String weiboId);
+	 
+	 boolean insertWeiboPicture(String weiboId, String picId);
+	 
+	 boolean deleteWeiboPicture(String weiboId, String picId);
 	
+	 /**
+	  * weibo profile related
+	  * @param weiboId
+	  * @return
+	  */
+	 
 	 String getLikeNumber(String weiboId);
 	
 	 String getCommentNumber(String weiboId);
 	
 	 String getForwardNumber(String weiboId);
 	
+	 /**
+	  * weibo like, forward, comment related 
+	  * @param weiboId
+	  * @param pageIndex
+	  * @param numberPerPage
+	  * @return
+	  */
+	 
 	 List<String> getLikeLIst(String weiboId, int pageIndex, int numberPerPage);
 	
 	 List<String> getForwardList(String weiboId, int pageIndex, int numberPerPage);
