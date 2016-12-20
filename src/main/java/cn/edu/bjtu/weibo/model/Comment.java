@@ -9,5 +9,14 @@ package cn.edu.bjtu.weibo.model;
  *
  */
 public class Comment extends BaseContent{
+	private String commentOrWeiboId;
+
+	public String getCommentOrWeiboId() {
+		return commentOrWeiboId;
+	}
+
+	public void setCommentOrWeiboId(String commentOrWeiboId) {
+		this.commentOrWeiboId = commentOrWeiboId;
+	}
 	
 }

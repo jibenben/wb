@@ -148,7 +148,7 @@ public interface UserDAO {
 	List<String> getWeiboAtMeMessage(String userId, int pageIndex, int pagePerNumber);
 	List<String> getCommentAtMeMessage(String userId, int pageIndex, int pagePerNumber);
 	String getNewComingContentAtMeMessageNumber(String userId);
-	boolean insertWeiboAtMe(String userId, String weiboId);
+	boolean insertWeiboAtMe(String fromUserId, String toUserId, String weiboId);
 	boolean insertCommentAtMe(String userId, String commentId);
 	boolean deleteWeiboAtMe(String userId, String weiboId);
 	boolean deleteCommentAtMe(String userId, String commentId);
@@ -170,10 +170,10 @@ public interface UserDAO {
 	List<String> getWeiboLikeMeMessage(String userId, int pageIndex, int pagePerNumber);
 	List<String> getCommentLikeMeMessage(String userId, int pageIndex, int pagePerNumber);
 	String getNewComingContentLikeMeMessageNumber(String userId);
-	boolean insertWeiboLikeMe(String userId, String weiboId);
-	boolean insertCommentLikeMe(String userId, String commentId);
-	boolean deleteWeiboLikeMe(String userId, String weiboId);
-	boolean deleteCommentLikeMe(String userId, String commentId);
+	boolean insertWeiboLikeMe(String fromUserId, String toUserId, String weiboId);
+	boolean insertCommentLikeMe(String fromUserId, String toUserId, String commentId);
+	boolean deleteWeiboLikeMe(String fromUserId, String toUserId, String weiboId);
+	boolean deleteCommentLikeMe(String fromUserId, String toUserId, String commentId);
 	
 	/*
 	 * user avatar related

@@ -9,12 +9,29 @@ package cn.edu.bjtu.weibo.service;
 
 public interface MessageToMeService {
 	/**
-	 * when a weibo or comment @ user, it will inform that user.
+	 * when a weibo @ user, it will inform that user.
 	 * @param weiboId
 	 * @param userId
 	 * @return
 	 */
-	boolean atMeInfromWeiboOrComment(String weiboOrCommentId ,String userId);
+	boolean atMeInfromWeibo(String userId, String weiboId);
+	
+	/**
+	 * when a comment @ user, it will inform that user.
+	 * @param weiboId
+	 * @param userId
+	 * @return
+	 */
+	boolean atMeInfromComment(String userId, String commentId);
+	
+	/**
+	 * When a user comment another user`s weibo or comment, that user should be notified
+	 * @param userId
+	 * @param commentId
+	 * @return
+	 */
+	
+	boolean commentMyWeiboInform(String userId, String commentId);
 	
 	/**
 	 * When a user comment another user`s weibo or comment, that user should be notified
@@ -24,7 +41,7 @@ public interface MessageToMeService {
 	 * @param weiboId
 	 * @return
 	 */
-	boolean commentMyWeiboOrCommentInform(String fromUserId, String toUserId, String commentId, String weiboOrCommentId);
+	boolean commentMyCommentInform(String userId, String commentId);
 	/**
 	 * When a user like some user`s weibo or comments, that user should be notified
 	 * @param fromUserId
@@ -32,5 +49,13 @@ public interface MessageToMeService {
 	 * @param weiboId
 	 * @return
 	 */
-	boolean likeMyWeiboOrCommentInform(int fromUserId, int toUserId, int weiboOrCommentId);
+	boolean likeMyWeiboInform(String fromUserId, String toUserId, String weiboId);
+	/**
+	 * When a user like some user`s weibo or comments, that user should be notified
+	 * @param fromUserId
+	 * @param toUserId
+	 * @param weiboId
+	 * @return
+	 */
+	boolean likeMyCommentInform(String fromUserId, String toUserId, String commentId);
 }

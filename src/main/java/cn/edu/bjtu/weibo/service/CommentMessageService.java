@@ -1,5 +1,7 @@
 package cn.edu.bjtu.weibo.service;
 
+import cn.edu.bjtu.weibo.model.Comment;
+
 /**
  * When some user try to comment some words to weibo or comment
  * 
@@ -26,7 +28,7 @@ public interface CommentMessageService {
 	 * @param comment
 	 * @return
 	 */
-	boolean CommentToWeibo(String userId, String weiboId, String comment);
+	boolean CommentToWeibo(String userId, String weiboId, Comment comment);
 	/**
 	 * 
 	 * @param userId
@@ -34,5 +36,5 @@ public interface CommentMessageService {
 	 * @param comment
 	 * @return
 	 */
-	boolean CommentToComment(String userId, String CommentId, String comment);
+	boolean CommentToComment(String userId, String CommentId, Comment comment);
 }

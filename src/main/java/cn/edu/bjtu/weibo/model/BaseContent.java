@@ -1,5 +1,7 @@
 package cn.edu.bjtu.weibo.model;
 
+import java.util.List;
+
 /**
  * BaseContent means it is the general definition of words contents.
  * it has contents, number of 'likes' and create date.
@@ -18,6 +20,26 @@ public class BaseContent {
 	private int like;
 	private String date;
 	private int commentNumber;
+	private String userId;
+	
+	private List<String> atUserIdList;
+	private List<String> topicIdList;
+	
+	public List<String> getAtUserIdList() {
+		return atUserIdList;
+	}
+
+	public void setAtUserIdList(List<String> atUserIdList) {
+		this.atUserIdList = atUserIdList;
+	}
+
+	public List<String> getTopicIdList() {
+		return topicIdList;
+	}
+
+	public void setTopicIdList(List<String> topicIdList) {
+		this.topicIdList = topicIdList;
+	}
 	
 	public int getCommentNumber() {
 		return commentNumber;
@@ -44,5 +66,13 @@ public class BaseContent {
 	}
 	public void setDate(String date) {
 		this.date = date;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 }
