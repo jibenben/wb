@@ -3,26 +3,28 @@ package cn.edu.bjtu.weibo.dao;
 import java.util.List;
 
 public interface WeiboDAO {
-	public String getOwner(String weiboId);
+	 String getOwner(String weiboId);
 	
-	public String getContent(String weiboId);
-	public boolean updateContent(String weiboId, String content);
+	 String getContent(String weiboId);
+	 boolean updateContent(String weiboId, String content);
 	
-	public String getTime(String weiboId);
+	 String getTime(String weiboId);
 	
-	public List<String> getWeiboPicurlOr(String weiboId);
+	 List<String> getWeiboPicurlOr(String weiboId);
 	
-	public List<String> getWeiboPicurlTh(String weiboId);
+	 List<String> getWeiboPicurlTh(String weiboId);
 	
-	public String getLikeNumber(String weiboId);
+	 String getLikeNumber(String weiboId);
 	
-	public String getCommentNumber(String weiboId);
+	 String getCommentNumber(String weiboId);
 	
-	public String getForwardNumber(String weiboId);
+	 String getForwardNumber(String weiboId);
 	
-	public List<String> getLikeLIst(String weiboId, int pageIndex, int numberPerPage);
+	 List<String> getLikeLIst(String weiboId, int pageIndex, int numberPerPage);
 	
-	public List<String> getForwardList(String weiboId, int pageIndex, int numberPerPage);
+	 List<String> getForwardList(String weiboId, int pageIndex, int numberPerPage);
 	
-	public List<String> getCommentList(String weiboId, int pageIndex, int numberPerPage);
+	 List<String> getCommentList(String weiboId, int pageIndex, int numberPerPage);
+	
+	 boolean deleteWeibo(String WeiboId);
 }
