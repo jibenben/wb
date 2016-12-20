@@ -31,7 +31,7 @@ public interface MessageToMeService {
 	 * @return
 	 */
 	
-	boolean commentMyWeiboInform(String userId, String commentId);
+	boolean commentMyWeiboInform(String userId, String weiboId);
 	
 	/**
 	 * When a user comment another user`s weibo or comment, that user should be notified
