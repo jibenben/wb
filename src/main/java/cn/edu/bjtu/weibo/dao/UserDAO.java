@@ -7,7 +7,10 @@ import cn.edu.bjtu.weibo.model.User;
 public interface UserDAO {
 	String insertNewUser(User user);
 	
+	
 	boolean setState(String id, boolean s);
+	
+	List<String> getUserId();
 	
 	/**
 	 * user profile related
