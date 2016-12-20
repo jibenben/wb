@@ -145,26 +145,35 @@ public interface UserDAO {
 	/*
 	 * User msg @ me related
 	 */
-	List<String> getWeiboAtMeRead(String userId, int pageIndex, int pagePerNumber);
-	String getNewComingWeiboAtMeMessageNumber(String userId);
+	List<String> getWeiboAtMeMessage(String userId, int pageIndex, int pagePerNumber);
+	List<String> getCommentAtMeMessage(String userId, int pageIndex, int pagePerNumber);
+	String getNewComingContentAtMeMessageNumber(String userId);
 	boolean insertWeiboAtMe(String userId, String weiboId);
+	boolean insertCommentAtMe(String userId, String commentId);
 	boolean deleteWeiboAtMe(String userId, String weiboId);
+	boolean deleteCommentAtMe(String userId, String commentId);
 	
 	/*
 	 * User msg comment me related
 	 */
 	List<String> getWeiboCommentMeMessage(String userId, int pageIndex, int pagePerNumber);
-	String getNewComingWeiboCommentMeMessageNumber(String userId);
+	List<String> getCommentCommentMeMessage(String userId, int pageIndex, int pagePerNumber);
+	String getNewComingContentCommentMeMessageNumber(String userId);
 	boolean insertWeiboCommentMe(String userId, String weiboId);
+	boolean insertCommentCommentMe(String userId, String commentId);
 	boolean deleteWeiboCommentMe(String userId, String weiboId);
+	boolean deleteCommentCommentMe(String userId, String commentId);
 	
 	/*
 	 * User msg like me related
 	 */
-	List<String> getWeiboLikeMeRead(String userId, int pageIndex, int pagePerNumber);
-	String getNewComingWeiboLikeMeMessageNumber(String userId);
+	List<String> getWeiboLikeMeMessage(String userId, int pageIndex, int pagePerNumber);
+	List<String> getCommentLikeMeMessage(String userId, int pageIndex, int pagePerNumber);
+	String getNewComingContentLikeMeMessageNumber(String userId);
 	boolean insertWeiboLikeMe(String userId, String weiboId);
+	boolean insertCommentLikeMe(String userId, String commentId);
 	boolean deleteWeiboLikeMe(String userId, String weiboId);
+	boolean deleteCommentLikeMe(String userId, String commentId);
 	
 	/*
 	 * user avatar related
