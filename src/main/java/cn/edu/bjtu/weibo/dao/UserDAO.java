@@ -165,4 +165,13 @@ public interface UserDAO {
 	String getNewComingWeiboLikeMeMessageNumber(String userId);
 	boolean insertWeiboLikeMe(String userId, String weiboId);
 	boolean deleteWeiboLikeMe(String userId, String weiboId);
+	
+	/*
+	 * user avatar related
+	 */
+	
+	List<String> getUserAvatars(String userId, int pageIndex, int pagePerNumber);
+	String getCurrentUserAvatar(String userId);
+	boolean insertUserAvatar(String userId, String picId);
+	boolean deleteUserAvatar(String userId, String picId);
 }
