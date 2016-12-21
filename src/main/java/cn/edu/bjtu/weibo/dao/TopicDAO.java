@@ -68,5 +68,11 @@ public interface TopicDAO {
 	 * @return
 	 */
 	int getHotOfTopic(String topicid);
+	/**
+	 * 
+	 * @param topicId
+	 * @return
+	 */
+	String getDateTopic(String topicId);
 }
  
