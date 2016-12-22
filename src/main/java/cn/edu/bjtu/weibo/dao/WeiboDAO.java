@@ -59,4 +59,8 @@ public interface WeiboDAO {
 	 boolean deleteWeibo(String weiboId);
 	 
 	 boolean deleteCommentFromWeibo(String fromWeiboId, String commentId);
+	 
+	 List<String> getAtUserList(String weiboId);
+	 
+	 List<String> getTopicList(String weiboId);
 }
