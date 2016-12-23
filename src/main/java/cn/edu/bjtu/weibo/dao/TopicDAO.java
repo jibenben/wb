@@ -9,7 +9,8 @@ import cn.edu.bjtu.weibo.model.Topic;
  *
  */
 public interface TopicDAO {
-	
+	boolean updateNumberofTopic();
+	String getTopicNumber();
 	/**
 	 * insert a new topic 
 	 * @param content (the topic content)
@@ -44,6 +45,13 @@ public interface TopicDAO {
 	List<String> getAllTopic(int pageIndex,int pagePerNumber);
 	/**
 	 * 
+	 * @param pageIndex
+	 * @param pagePerNumber
+	 * @return
+	 */
+	List<String> gethotTopic(int pageIndex,int pagePerNumber);
+	/**
+	 * 
 	 * @param topicid
 	 * @return
 	 */
@@ -67,12 +75,18 @@ public interface TopicDAO {
 	 * @param topicid
 	 * @return
 	 */
-	int getHotOfTopic(String topicid);
+	String getContenteNumberContainTpoci(String topicid);
 	/**
 	 * 
 	 * @param topicId
 	 * @return
 	 */
-	String getDateTopic(String topicId);
+	String getTimeofTopic(String topicId);
+	/**
+	 * 
+	 * @param topicId
+	 * @return
+	 */
+	String getOwnerTopic(String topicId);
 }
  

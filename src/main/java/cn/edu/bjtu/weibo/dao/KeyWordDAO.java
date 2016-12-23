@@ -18,7 +18,7 @@ public interface KeyWordDAO {
 	 * 
 	 * @return
 	 */
-	List<String> getAll();
+	List<String> getAll(int pageIndex, int pagePerNumber);
 	/**
 	 * 
 	 * @param word

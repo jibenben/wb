@@ -5,17 +5,14 @@ import java.util.List;
 import cn.edu.bjtu.weibo.model.User;
 
 public interface UserDAO {
-	String insertNewUser(User user);
 	
-	
-	boolean setState(String id, boolean s);
-	
+	boolean updateNumberofUser();
+	String  getUserNumber();
+	boolean  insertNewUser(String name);
 	List<String> getUserId();
-	
 	/**
 	 * user profile related
 	 */
-	
 	String getUserName(String userId);
 	boolean updateUserName(String userId, String userName);
 	
@@ -54,7 +51,9 @@ public interface UserDAO {
 	 */
 	
 	String getWeiboNumber(String userId);
-	String updateWeiboNumber(String userId, String weiboNumber);
+	boolean increaseWeiboNumber(String userId);
+	boolean decreaseWeiboNumber(String userId);
+	
 	
 	/*
 	 * Weibo related
@@ -64,19 +63,22 @@ public interface UserDAO {
 	boolean insertWeibo(String userId, String weiboId);
 	boolean deleteWeibo(String userId, String weiboId);
 	
+	
 	/**
 	 * followerNumber related
 	 */
 	
 	String getFollowerNumber(String userId);
-	String updateFollowerNumber(String userId, String followerNumber);
+	boolean  increaseFollowerNumber(String userId);
+	boolean  decreaseFollowerNumber(String userId);
 	
 	/**
 	 * following related
 	 */
 	
 	String getFollowingNumber(String userId);
-	String updateFollowingNumber(String userId, String followeingNumber);
+	boolean increaseFollowingNumber(String userId);
+	boolean decreaseFollowingNumber(String userId);
 	
 	/**
 	 * follower related 
