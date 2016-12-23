@@ -3,8 +3,10 @@ package cn.edu.bjtu.weibo.dao;
 import java.util.List;
 
 public interface WeiboDAO {
+	 boolean updateNumberofWeibo();
+	 String getWeiboNumber();
 	 String getOwner(String weiboId);
-	
+	 boolean insertweibo(String userId,String content,String sendTime,List<String> list);
 	 /**
 	  * weibo content related
 	  * @param weiboId
@@ -14,7 +16,7 @@ public interface WeiboDAO {
 	 String getContent(String weiboId);
 	 boolean updateContent(String weiboId, String content);
 	
-	 String getTime(String weiboId);
+	 String getsendTime(String weiboId);
 	 
 	 /**
 	  * weibo attached picture related operation
@@ -22,10 +24,7 @@ public interface WeiboDAO {
 	  * @return
 	  */
 	 
-	 List<String> getWeiboPicurlOr(String weiboId);
-	
-	 List<String> getWeiboPicurlTh(String weiboId);
-	 
+	 List<String> getWeiboPicurl(String weiboId);
 	 boolean insertWeiboPicture(String weiboId, String picId);
 	 
 	 boolean deleteWeiboPicture(String weiboId, String picId);
@@ -37,11 +36,16 @@ public interface WeiboDAO {
 	  */
 	 
 	 String getLikeNumber(String weiboId);
+	 boolean updateLikeNmuber(String weiboId);
+	 boolean updateLikeList(String weiboId,String userId);
 	
 	 String getCommentNumber(String weiboId);
-	
+	 boolean updateCommentNumber(String weiboId);
+	 boolean updateCommentList(String weiboId,String userId);
+	 
 	 String getForwardNumber(String weiboId);
-	
+	 boolean updateForwordNumber(String weiboId);
+	 boolean updateForwardList(String weiboId,String userId);
 	 /**
 	  * weibo like, forward, comment related 
 	  * @param weiboId

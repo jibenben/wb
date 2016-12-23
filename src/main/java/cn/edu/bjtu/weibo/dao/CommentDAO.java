@@ -3,6 +3,25 @@ package cn.edu.bjtu.weibo.dao;
 import java.util.List;
 
 public interface CommentDAO {
+	/**
+	 * 
+	 * @param commentContent
+	 * @param becommentedWeiboOrComment
+	 * @param owner
+	 * @param time
+	 * @return the id 
+	 */
+	
+	String  insert(String commentContent,String becommentedWeiboOrComment,String owner,String time );
+	boolean updateNumberofComment();
+	String getCommentNumber();
+	
+	boolean updateLikeNumber();
+	boolean updateLikeList(String commentid,String userId);
+	
+	boolean updateCommentNUmber();
+	boolean updateCOmmentList(String commentid,String commemtidComment);
+	
 	String getContent(String commentId);
 	List<String> getAtUsersInComment(String commentId);
 	List<String> getTpoicInComment(String commentId);
