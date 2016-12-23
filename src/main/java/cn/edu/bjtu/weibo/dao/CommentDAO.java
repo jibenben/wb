@@ -19,4 +19,5 @@ public interface CommentDAO {
 	
 	String getOwner(String commentid);
 	String getTime(String commentid);
+	
 }
