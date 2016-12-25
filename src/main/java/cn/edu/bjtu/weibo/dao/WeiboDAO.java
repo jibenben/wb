@@ -2,65 +2,76 @@ package cn.edu.bjtu.weibo.dao;
 
 import java.util.List;
 
+import cn.edu.bjtu.weibo.model.Weibo;
+
 public interface WeiboDAO {
-	 boolean updateNumberofWeibo();
-	 String getWeiboNumber();
-	 String getOwner(String weiboId);
-	 boolean insertweibo(String userId,String content,String sendTime,List<String> list);
+	
+	 int getTotalWeiboNumber();
+	 List<String> getTotalWeibo();
+	 
+	 /**
+	  * create a new weibo in the system, it will automatically update the number total weibo Number
+	  * @param weibo
+	  * @return
+	  */
+	 String insertNewWeibo(Weibo weibo);
+	 boolean deleteWeibo(String weiboId);
+	 Weibo getWeibo(String weiboId);
+	 
 	 /**
 	  * weibo content related
 	  * @param weiboId
 	  * @return
 	  */
+	 String getOwner(String weiboId);
 	 
 	 String getContent(String weiboId);
 	 boolean updateContent(String weiboId, String content);
 	
-	 String getsendTime(String weiboId);
+	 String getSendTime(String weiboId);
 	 
 	 /**
 	  * weibo attached picture related operation
 	  * @param weiboId
+	  * @param picId
 	  * @return
 	  */
-	 
-	 List<String> getWeiboPicurl(String weiboId);
 	 boolean insertWeiboPicture(String weiboId, String picId);
-	 
 	 boolean deleteWeiboPicture(String weiboId, String picId);
+	 List<String> getWeiboPicurl(String weiboId);
+	 
+	/**
+	 * get the like list, which contain all the user id who like this weibo, when insert or delete, the like number will be automatically updated
+	 * @param weiboId
+	 * @param userId
+	 * @return
+	 */
+	 boolean insertLikeList(String weiboId,String userId);
+	 boolean deleteLikeList(String weiboId,String userId);
+	 List<String> getLikeList(String weiboId, int pageIndex, int numberPerPage);
+	 int getLikeNumber(String weiboId);
 	
 	 /**
-	  * weibo profile related
+	  * get the comment list which contain all the commentId which comment this weibo
 	  * @param weiboId
+	  * @param commentId
 	  * @return
 	  */
-	 
-	 String getLikeNumber(String weiboId);
-	 boolean updateLikeNmuber(String weiboId);
-	 boolean updateLikeList(String weiboId,String userId);
-	
-	 String getCommentNumber(String weiboId);
-	 boolean updateCommentNumber(String weiboId);
-	 boolean updateCommentList(String weiboId,String userId);
-	 
-	 String getForwardNumber(String weiboId);
-	 boolean updateForwordNumber(String weiboId);
-	 boolean updateForwardList(String weiboId,String userId);
-	 /**
-	  * weibo like, forward, comment related 
-	  * @param weiboId
-	  * @param pageIndex
-	  * @param numberPerPage
-	  * @return
-	  */
-	 
-	 List<String> getLikeLst(String weiboId, int pageIndex, int numberPerPage);
-	
-	 List<String> getForwardList(String weiboId, int pageIndex, int numberPerPage);
-	
+	 boolean insertCommentList(String weiboId,String commentId);
+	 boolean deleteCommentList(String weiboId,String commentId);
 	 List<String> getCommentList(String weiboId, int pageIndex, int numberPerPage);
-	
-	 boolean deleteWeibo(String weiboId);
+	 int getCommentNumber(String weiboId);
+	 
+	 /**
+	  * when forward this weibo, it means another user just send a new weibo with this weibo attached in the end
+	  * @param weiboId
+	  * @param forwardWeiboId
+	  * @return
+	  */
+	 boolean insertForwardList(String weiboId,String forwardWeiboId);
+	 boolean deleteForwardList(String weiboId,String forwardWeiboId);
+	 List<String> getForwardList(String weiboId, int pageIndex, int numberPerPage);
+	 int getForwardNumber(String weiboId);
 	 
 	 boolean deleteCommentFromWeibo(String fromWeiboId, String commentId);
 	 
