@@ -9,8 +9,6 @@ import cn.edu.bjtu.weibo.model.Topic;
  *
  */
 public interface TopicDAO {
-	boolean updateNumberofTopic();
-	String getTopicNumber();
 	/**
 	 * insert a new topic 
 	 * @param content (the topic content)
@@ -42,6 +40,11 @@ public interface TopicDAO {
 	 * @param pagePerNumber
 	 * @return
 	 */
+	/**
+	 * 
+	 * @return
+	 */
+	List<String> getAllTopic();
 	List<String> getAllTopic(int pageIndex,int pagePerNumber);
 	/**
 	 * 
