@@ -1,5 +1,9 @@
 package cn.edu.bjtu.weibo.service;
 
+import java.util.List;
+
+import cn.edu.bjtu.weibo.model.User;
+
 /**
  * Use this service, you can classify your interested user you want to follow.
  * 
@@ -14,7 +18,7 @@ public interface UserFollowingGroupService {
 	 * @param groupName
 	 * @return
 	 */
-	boolean andToNewGroup(String userId, String otherUserId, String groupName);
+	boolean addToNewGroup(String userId, String otherUserId, String groupName);
 	/**
 	 * Add some user to existed group.
 	 * @param userId
@@ -22,17 +26,17 @@ public interface UserFollowingGroupService {
 	 * @param groupId
 	 * @return
 	 */
-	boolean addToExistedGroup(String userId, String otherUserId, String groupId);
+	boolean addToExistedGroup(String userId, String otherUserId, String groupName);
 	/**
 	 * Get all group names for display.
 	 * @param userId
 	 * @return
 	 */
-	boolean getGroupNames(String userId);
+	List<String> getGroupNames(String userId);
 	/**
 	 * Get all users belong to some group
 	 * @param groupId
 	 * @return
 	 */
-	boolean getUsersByGroup(String groupId);
+	List<User> getUsersByGroup(String userId, String groupId, String pageIndex, String numberPerPage);
 }
