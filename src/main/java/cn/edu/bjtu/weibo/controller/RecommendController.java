@@ -1,5 +1,5 @@
 package cn.edu.bjtu.weibo.controller;
 
-public class LoginController {
+public class RecommendController {
 
 }
