@@ -7,11 +7,11 @@ import cn.edu.bjtu.weibo.model.User;
 public interface UserDAO {
 	
 	/**
-	 * Create a new user in the system
+	 * Create a new user profile in the system, the userId will be created or get from loginDAO
 	 * @param user
 	 * @return new User id
 	 */
-	String insertNewUserProfile(User user);
+	boolean insertNewUserProfile(String userId, User user);
 	/**
 	 * delete a user from the system
 	 * @param userId
