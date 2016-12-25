@@ -3,6 +3,7 @@ package cn.edu.bjtu.weibo.dao;
 import java.util.List;
 
 import cn.edu.bjtu.weibo.model.Topic;
+
 /**
  * this is the data about topic
  * @author ji
@@ -10,14 +11,11 @@ import cn.edu.bjtu.weibo.model.Topic;
  */
 public interface TopicDAO {
 	/**
-	 * insert a new topic 
-	 * @param content (the topic content)
-	 * @param UserId (the id of user who create topic)
-	 * @param date 
-	 * @param WeiboId(the id of weibo which contains the topic )
+	 * insert a new topic
+	 * @param topic
 	 * @return
 	 */
-	 boolean insertNewTopic(String content,String UserId,String date,String WeiboId);
+	String insertNewTopic(Topic topic);
 	/**
 	 * 
 	 * @param topicid
@@ -25,8 +23,10 @@ public interface TopicDAO {
 	 * @param pagePerNumber
 	 * @return
 	 */
-	List<String> getAllWeibo(String topicid,int pageIndex, int pagePerNumber);
+	List<String> getAllWeibo(String topicId,int pageIndex, int pagePerNumber);
 	List<String> getAllWeibo(String topicId);
+	boolean insertWeibo(String topicid,String weiboId);
+	
 	/**
 	 * 
 	 * @param topicid
@@ -36,16 +36,8 @@ public interface TopicDAO {
 	 */
 	List<String> getAllComment(String topicid,int pageIndex, int pagePerNumber);
 	List<String> getAllComment(String topicid);
-	/**
-	 * 
-	 * @param pageIndex
-	 * @param pagePerNumber
-	 * @return
-	 */
-	/**
-	 * 
-	 * @return
-	 */
+	boolean insertComment(String topicid,String commentid);
+	
 	List<String> getAllTopic();
 	List<String> getAllTopic(int pageIndex,int pagePerNumber);
 	/**
@@ -54,34 +46,21 @@ public interface TopicDAO {
 	 * @param pagePerNumber
 	 * @return
 	 */
-	List<String> gethotTopic(int pageIndex,int pagePerNumber);
-	List<String> gethotTopic();
+	List<String> getHotTopic(int pageIndex,int pagePerNumber);
+	List<String> getHotTopic();
 	/**
 	 * 
 	 * @param topicid
 	 * @return
 	 */
 	String getContent(String topicid);
+	
 	/**
-	 * 
-	 * @param topicid
-	 * @param weiboId
-	 * @return
-	 */
-	boolean insertWeibo(String topicid,String weiboId);
-	/**
-	 * 
-	 * @param topicid
-	 * @param commentid
-	 * @return
-	 */
-	boolean insertComment(String topicid,String commentid);
-	/**
-	 * 
+	 * this will be automatically update by insert weibo or comment.
 	 * @param topicid
 	 * @return
 	 */
-	String getContenteNumberContainTpoci(String topicid);
+	int getContenteNumberContainTopic(String topicid);
 	/**
 	 * 
 	 * @param topicId

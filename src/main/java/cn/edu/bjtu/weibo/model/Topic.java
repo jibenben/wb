@@ -2,6 +2,8 @@ package cn.edu.bjtu.weibo.model;
 
 public class Topic {
 	public String date;
+	private String topic;
+	private String owner;
 	public String getDate() {
 		return date;
 	}
@@ -18,5 +20,11 @@ public class Topic {
 		this.topic = topic;
 	}
 
-	private String topic;
+	public String getOwner() {
+		return owner;
+	}
+
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
 }
