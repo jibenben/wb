@@ -26,6 +26,7 @@ public interface TopicDAO {
 	 * @return
 	 */
 	List<String> getAllWeibo(String topicid,int pageIndex, int pagePerNumber);
+	List<String> getAllWeibo(String topicId);
 	/**
 	 * 
 	 * @param topicid
@@ -34,6 +35,7 @@ public interface TopicDAO {
 	 * @return
 	 */
 	List<String> getAllComment(String topicid,int pageIndex, int pagePerNumber);
+	List<String> getAllComment(String topicid);
 	/**
 	 * 
 	 * @param pageIndex
@@ -53,6 +55,7 @@ public interface TopicDAO {
 	 * @return
 	 */
 	List<String> gethotTopic(int pageIndex,int pagePerNumber);
+	List<String> gethotTopic();
 	/**
 	 * 
 	 * @param topicid
