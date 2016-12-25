@@ -18,4 +18,9 @@ public interface SearchTopicService {
 	 * @return
 	 */
 	List<BaseContentSR> getSearchedContentWithTopicList(String keyword, int pageIndex, int numberPerPage);
+	
+	/**
+	 * update index
+	 */
+	void updateSearchIndex();
 }

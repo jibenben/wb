@@ -17,4 +17,9 @@ public interface SearchContentService {
 	 * @return
 	 */
 	List<BaseContentSR> getSearchedWeiboList(String keyword, int pageIndex, int numberPerPage);
+	
+	/**
+	 * update index
+	 */
+	void updateSearchIndex();
 }

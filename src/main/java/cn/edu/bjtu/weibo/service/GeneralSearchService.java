@@ -20,4 +20,9 @@ public interface GeneralSearchService {
 	 * @return
 	 */
 	List<GeneralSR> getGeneralSearchedResult(String keyword, int pageIndex, int numberPerPage);
+	
+	/**
+	 * update index
+	 */
+	void updateSearchIndex();
 }

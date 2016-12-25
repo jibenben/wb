@@ -20,4 +20,8 @@ public interface SearchUserService {
 	 * @return
 	 */
 	List<UserSR> getSearchedUserList(String username, int pageIndex, int numberPerPage);
+	/**
+	 * update index
+	 */
+	void updateSearchIndex();
 }
