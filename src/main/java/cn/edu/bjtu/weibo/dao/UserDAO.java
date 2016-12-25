@@ -183,6 +183,7 @@ public interface UserDAO {
 	
 	List<String> getUserAvatars(String userId, int pageIndex, int pagePerNumber);
 	String getCurrentUserAvatar(String userId);
+	boolean setCurrentUserAvatar(String userId,String imgid);
 	boolean insertUserAvatar(String userId, String picId);
 	boolean deleteUserAvatar(String userId, String picId);
 }
