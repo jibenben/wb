@@ -138,7 +138,7 @@ public interface UserDAO {
 	 */
 	boolean insertNewGroup(String userId, String group);
 	boolean deleteGroup(String userId, String group);
-	List<String> getGroups(String userId, int pageIndex, int pagePerNumber);
+	List<String> getGroups(String userId);
 	boolean insertUserToGroup(String userId, String group, String followingUserId);
 	boolean deleteUserFromGroup(String userId, String group, String followingUserId);
 	List<String> getUsersByGroup(String userId, String group, int pageIndex, int pagePerNumber);
