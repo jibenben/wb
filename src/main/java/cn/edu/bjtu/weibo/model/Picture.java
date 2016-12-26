@@ -1,8 +1,9 @@
 package cn.edu.bjtu.weibo.model;
 
 public class Picture {
-	public String picurlth;
-	public String picurlor;
+	private String time;
+	private String picurlth;
+	private String picurlor;
 	
 	public String getPicurlor() {
 		return picurlor;
@@ -18,5 +19,13 @@ public class Picture {
 
 	public void setPicurl(String picurl) {
 		this.picurlth = picurl;
+	}
+
+	public String getTime() {
+		return time;
+	}
+
+	public void setTime(String time) {
+		this.time = time;
 	}
 }

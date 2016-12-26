@@ -22,4 +22,6 @@ public interface PictureService {
 	 * @return
 	 */
 	List<String> uploadPicture(MultipartFile multipartFile);
+	
+	Picture getPicture(String picId);
 }
