@@ -14,4 +14,14 @@ public interface LikeActionService {
 	 * @return
 	 */
 	boolean LikeWeiboOrCommentAction(String userId ,String weiboOrCommentId);
+	
+	/**
+	 * 
+	 * @param userId
+	 * @param weiboOrCommentId
+	 * @param pageIndex
+	 * @param numberPerPage
+	 * @return
+	 */
+	boolean LikeWeiboOrCommentAction(String userId,String weiboOrCommentId,int pageIndex, int numberPerPage);
 }
