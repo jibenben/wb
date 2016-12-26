@@ -1,5 +1,7 @@
 package cn.edu.bjtu.weibo.service;
 
+import java.util.List;
+
 import org.springframework.web.multipart.MultipartFile;
 
 import cn.edu.bjtu.weibo.model.Picture;
@@ -19,5 +21,5 @@ public interface PictureService {
 	 * @param multipartFile
 	 * @return
 	 */
-	Picture uploadPicture(MultipartFile multipartFile);
+	List<String> uploadPicture(MultipartFile multipartFile);
 }
