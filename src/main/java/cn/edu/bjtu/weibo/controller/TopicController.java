@@ -3,18 +3,16 @@ package cn.edu.bjtu.weibo.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import cn.edu.bjtu.weibo.model.Topic;
 
-@Controller
+@RestController
 @RequestMapping("/t")
 public class TopicController {
 	@RequestMapping(value = "/topic")
-	public @ResponseBody
-	List<Topic> getAllTopic() {
+	public List<Topic> getAllTopic() {
 		List<Topic> topicList = new ArrayList<Topic>();
 		Topic topic1 = new Topic();
 		topic1.setDate("2016/12/26 10:10:10");
