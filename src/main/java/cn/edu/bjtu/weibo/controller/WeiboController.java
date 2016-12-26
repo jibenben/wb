@@ -1,5 +1,10 @@
 package cn.edu.bjtu.weibo.controller;
 
-public class WeiboController {
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
+@Controller
+@RequestMapping("/w")
+public class WeiboController {
+	
 }
