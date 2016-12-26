@@ -42,4 +42,6 @@ public interface ReportDAO{
 	 */
 	List<String> ReportWeiboList(int pageIndex, int pagePerNumber);
 	
+	boolean ReportComment(String userId,String commentId);
+	
 }
