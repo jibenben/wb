@@ -26,6 +26,18 @@ public interface UserDAO {
 	User getUser(String userId);
 	
 	List<String> getTotalUserId();
+	
+	/**
+	 * When some user was reported, which means this user will be block by this system,
+	 * so this function will get all the users who have been in the unavailable state, he can do nothing.
+	 * @return
+	 */
+	List<String> getUnavailableUser();
+	
+	boolean insertUserToUnavailableList(String userId);
+	
+	boolean deleteUserFromUnavailableList(String userId);
+	
 	int getTotalUserNumber();
 	/**
 	 * user profile related
