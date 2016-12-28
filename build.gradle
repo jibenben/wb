@@ -30,6 +30,7 @@ dependencies {
     compile "com.fasterxml.jackson.core:jackson-core:2.6.0"
     compile "com.fasterxml.jackson.core:jackson-databind:2.6.0"
     compile "com.fasterxml.jackson.core:jackson-annotations:2.6.0"
+    compile 'com.auth0:java-jwt:3.0.2'
 
     // Declare the dependency for your favourite test framework you want to use in your tests.
     // TestNG is also supported by the Gradle Test task. Just change the

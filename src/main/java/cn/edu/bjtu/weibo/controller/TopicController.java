@@ -17,13 +17,13 @@ public class TopicController {
 		Topic topic1 = new Topic();
 		topic1.setDate("2016/12/26 10:10:10");
 		topic1.setOwner("xiaoming");
-		topic1.setTopic("åœ£è¯å¤§æˆ˜");
+		topic1.setTopic("Ê¥µ®´óÕ½");
 		topicList.add(topic1);
 		
 		Topic topic2 = new Topic();
 		topic2.setDate("2016/12/26 12:10:12");
 		topic2.setOwner("xiaoming");
-		topic2.setTopic("2017é“è·¯æ˜¥è¿");
+		topic2.setTopic("2017´ºÔË");
 		topicList.add(topic2);
 		return topicList;
 	}
