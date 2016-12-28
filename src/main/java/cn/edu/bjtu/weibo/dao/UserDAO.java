@@ -125,17 +125,17 @@ public interface UserDAO {
 	/**
 	 * comment on weibo related
 	 */
-	boolean insertCommentOnWeibo(String userId, String weiboId);
-	boolean deleteCommentOnWeibo(String userId, String weiboId);
-	List<String> getCommentOnWeibo(String userId, int pageIndex, int pagePerNumber);  
+	boolean insertCommentOnWeibo(String commentId, String weiboId);
+	boolean deleteCommentOnWeibo(String commentId, String weiboId);
+	List<String> getCommentOnWeibo(String weiboId, int pageIndex, int pagePerNumber);  
 	
 	
 	/**
 	 * comment on comment related
 	 */
-	List<String> getCommentOnComment(String userId, int pageIndex, int pagePerNumber);  
-	boolean insertCommentOnComment(String userId, String commentId);
-	boolean deleteCommentOnComment(String userId, String commentId);
+	List<String> getCommentOnComment(String commentId, int pageIndex, int pagePerNumber);  
+	boolean insertCommentOnComment(String commentId, String oncommentId);
+	boolean deleteCommentOnComment(String commentId, String oncommentId);
 	
 	
 	/**
@@ -164,7 +164,7 @@ public interface UserDAO {
 	int getNewComingContentAtMeMessageNumber(String userId);
 	boolean insertWeiboAtMe(String fromUserId, String toUserId, String weiboId);
 	boolean insertCommentAtMe(String userId, String commentId);
-	boolean deleteWeiboAtMe(String userId, String weiboId);
+	boolean deleteWeiboAtMe(String fromUserId, String toUserId, String weiboId);
 	boolean deleteCommentAtMe(String userId, String commentId);
 	
 	/*
