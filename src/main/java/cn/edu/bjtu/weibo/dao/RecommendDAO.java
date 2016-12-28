@@ -64,6 +64,13 @@ public interface RecommendDAO {
 	 * @return
 	 */
 	boolean deleteRecommendWeibo(String userId);
+	/**
+	 * 
+	 * @param weiboId
+	 * @param userId
+	 * @return
+	 */
+	boolean deleteRcommendWeiboById(String weiboId,String userId);
 	
 	
 }
