@@ -20,4 +20,6 @@ public interface RecommendUsersService {
 	 * @return
 	 */
 	List<User> getRecommendUserList(String userId, int pageIndex, int numberPerPage);
+	
+	void updateRecommendResult();
 }

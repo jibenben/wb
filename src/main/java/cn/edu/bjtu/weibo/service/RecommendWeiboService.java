@@ -20,4 +20,6 @@ public interface RecommendWeiboService {
 	 * @return
 	 */
 	List<Weibo> getRecommentWeiboList(String userId, int pageIndex, int numberPerPage);
+	
+	void updateRecommendResult();
 }
