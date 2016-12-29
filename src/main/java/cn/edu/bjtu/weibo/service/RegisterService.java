@@ -1,5 +1,7 @@
 package cn.edu.bjtu.weibo.service;
 
+import cn.edu.bjtu.weibo.model.LoginUser;
+
 /**
  * Register a new user, make sure the password should be encrypted
  * 
@@ -14,7 +16,7 @@ public interface RegisterService {
 	 * @param password
 	 * @return
 	 */
-	boolean registerNewUser(String username, String password);
+	boolean registerNewUser(LoginUser user);
 	/**
 	 * 
 	 * @param username

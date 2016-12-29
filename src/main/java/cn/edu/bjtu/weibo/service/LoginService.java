@@ -1,5 +1,7 @@
 package cn.edu.bjtu.weibo.service;
 
+import cn.edu.bjtu.weibo.model.LoginUser;
+
 /**
  * When user try to login weibo
  * @author Liu Jinfeng
@@ -12,12 +14,5 @@ public interface LoginService {
 	 * @param password
 	 * @return
 	 */
-	String getLoginUserId(String usename, String password);
-	/**
-	 * 
-	 * @param username
-	 * @param password
-	 * @return
-	 */
-	boolean isUserExisted(String username, String password);
+	String getLoginUserToken(LoginUser user);
 }

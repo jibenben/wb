@@ -7,8 +7,8 @@ package cn.edu.bjtu.weibo.service;
 public interface LogoutService {
 	/**
 	 * 
-	 * @param userId
+	 * @param userToken
 	 * @return
 	 */
-	boolean logout(String userId);
+	boolean logout(String userToken);
 }
