@@ -83,7 +83,7 @@ public interface UserDAO {
 	 */
 	boolean insertWeibo(String userId, String weiboId);
 	boolean deleteWeibo(String userId, String weiboId);
-	List<String> getWeibo(String userId, int pageIndex, int pagePerNumber);
+	List<String> getWeibo(String userId, int pageIndex, int numberPerPage);
 	int getWeiboNumber(String userId);
 	
 	/**
@@ -91,7 +91,7 @@ public interface UserDAO {
 	 */
 	boolean insertFollower(String userId, String followerId);
 	boolean deleteFollower(String userId, String followerId);
-	List<String> getFollowers(String userId, int pageIndex, int pagePerNumber); 
+	List<String> getFollowers(String userId, int pageIndex, int numberPerPage); 
 	int getFollowerNumber(String userId);
 	
 	/**
@@ -102,7 +102,7 @@ public interface UserDAO {
 	 */
 	boolean insertFollowing(String userId, String followingId);
 	boolean deleteFollowing(String userId, String followingId);
-	List<String> getFollowing(String userId, int pageIndex, int pagePerNumber);
+	List<String> getFollowing(String userId, int pageIndex, int numberPerPage);
 	int getFollowingNumber(String userId);
 		
 	/**
@@ -113,27 +113,27 @@ public interface UserDAO {
 	 */
 	boolean insertForwardWeibo(String userId, String weiboId);
 	boolean deleteForwardWeibo(String userId, String weiboId);
-	List<String> getForwardWeibo(String userId, int pageIndex, int pagePerNumber);  
+	List<String> getForwardWeibo(String userId, int pageIndex, int numberPerPage);  
 	
 	/**
 	 * like weibo related
 	 */
 	boolean insertLikeWeibo(String userId, String weiboId);
 	boolean deleteLikeWeibo(String userId, String weiboId);
-	List<String> getLikeWeibo(String userId, int pageIndex, int pagePerNumber);  
+	List<String> getLikeWeibo(String userId, int pageIndex, int numberPerPage);  
 	
 	/**
 	 * comment on weibo related
 	 */
 	boolean insertCommentOnWeibo(String commentId, String weiboId);
 	boolean deleteCommentOnWeibo(String commentId, String weiboId);
-	List<String> getCommentOnWeibo(String weiboId, int pageIndex, int pagePerNumber);  
+	List<String> getCommentOnWeibo(String weiboId, int pageIndex, int numberPerPage);  
 	
 	
 	/**
 	 * comment on comment related
 	 */
-	List<String> getCommentOnComment(String commentId, int pageIndex, int pagePerNumber);  
+	List<String> getCommentOnComment(String commentId, int pageIndex, int numberPerPage);  
 	boolean insertCommentOnComment(String commentId, String oncommentId);
 	boolean deleteCommentOnComment(String commentId, String oncommentId);
 	
@@ -143,7 +143,7 @@ public interface UserDAO {
 	 */
 	boolean insertFavoriteWeibo(String userId, String weiboId);
 	boolean deleteFavoriteWeibo(String userId, String weiboId);
-	List<String> getFavoriteWeibo(String userId, int pageIndex, int pagePerNumber);
+	List<String> getFavoriteWeibo(String userId, int pageIndex, int numberPerPage);
 	
 	/**
 	 * Group info related
@@ -153,14 +153,15 @@ public interface UserDAO {
 	List<String> getGroups(String userId);
 	boolean insertUserToGroup(String userId, String group, String followingUserId);
 	boolean deleteUserFromGroup(String userId, String group, String followingUserId);
-	List<String> getUsersByGroup(String userId, String group, int pageIndex, int pagePerNumber);
+	List<String> getUsersByGroup(String userId, String group, int pageIndex, int numberPerPage);
 	
 	
 	/*
 	 * User msg @ me related
 	 */
-	List<String> getWeiboAtMeMessage(String userId, int pageIndex, int pagePerNumber);
-	List<String> getCommentAtMeMessage(String userId, int pageIndex, int pagePerNumber);
+	List<String> getWeiboAtMeMessage(String userId, int pageIndex, int numberPerPage);
+	List<String> getCommentAtMeMessage(String userId, int pageIndex, int numberPerPage);
+	List<String> getContentAtMeMessage(String userId, int pageIndex, int numberPerPage);
 	int getNewComingContentAtMeMessageNumber(String userId);
 	boolean insertWeiboAtMe(String fromUserId, String toUserId, String weiboId);
 	boolean insertCommentAtMe(String userId, String commentId);
@@ -170,8 +171,9 @@ public interface UserDAO {
 	/*
 	 * User msg comment me related
 	 */
-	List<String> getWeiboCommentMeMessage(String userId, int pageIndex, int pagePerNumber);
-	List<String> getCommentCommentMeMessage(String userId, int pageIndex, int pagePerNumber);
+	List<String> getWeiboCommentMeMessage(String userId, int pageIndex, int numberPerPage);
+	List<String> getCommentCommentMeMessage(String userId, int pageIndex, int numberPerPage);
+	List<String> getContentCommentMeMessage(String userId, int pageIndex, int numberPerPage);
 	int getNewComingContentCommentMeMessageNumber(String userId);
 	boolean insertWeiboCommentMe(String userId, String weiboId);
 	boolean insertCommentCommentMe(String userId, String commentId);
@@ -181,8 +183,9 @@ public interface UserDAO {
 	/*
 	 * User msg like me related
 	 */
-	List<String> getWeiboLikeMeMessage(String userId, int pageIndex, int pagePerNumber);
-	List<String> getCommentLikeMeMessage(String userId, int pageIndex, int pagePerNumber);
+	List<String> getWeiboLikeMeMessage(String userId, int pageIndex, int numberPerPage);
+	List<String> getCommentLikeMeMessage(String userId, int pageIndex, int numberPerPage);
+	List<String> getContentLikeMeMessage(String userId, int pageIndex, int numberPerPage);
 	int getNewComingContentLikeMeMessageNumber(String userId);
 	boolean insertWeiboLikeMe(String fromUserId, String toUserId, String weiboId);
 	boolean insertCommentLikeMe(String fromUserId, String toUserId, String commentId);
@@ -193,7 +196,7 @@ public interface UserDAO {
 	 * user avatar related
 	 */
 	
-	List<String> getUserAvatars(String userId, int pageIndex, int pagePerNumber);
+	List<String> getUserAvatars(String userId, int pageIndex, int numberPerPage);
 	String getCurrentUserAvatar(String userId);
 	boolean setCurrentUserAvatar(String userId,String imgid);
 	boolean insertUserAvatar(String userId, String picId);
