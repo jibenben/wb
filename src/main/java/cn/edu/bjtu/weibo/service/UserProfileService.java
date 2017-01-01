@@ -11,12 +11,6 @@ import cn.edu.bjtu.weibo.model.User;
 
 public interface UserProfileService {
 	/**
-	 * Create a new user
-	 * @param user
-	 * @return
-	 */
-	boolean createNewUser(User user);
-	/**
 	 * Get a user profile
 	 * @param userId
 	 * @return
