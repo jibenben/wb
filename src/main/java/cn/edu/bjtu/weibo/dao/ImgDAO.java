@@ -20,10 +20,8 @@ public interface ImgDAO {
 	String  getimgThUrl(String imgid);
 	String  getLikeNumber(String imgid);
 	List<String> getLikeList(String imgid);
-	boolean updateLikeNumber(String imgid);
-	boolean updateLikeList(String imgid);
+	boolean updateLikeList(String imgid,String userid);
 	boolean delete(String imgid);
-	boolean updateNumberofimg();
 	String  getimgNumber();
 	
 }
