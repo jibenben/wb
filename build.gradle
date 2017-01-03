@@ -10,7 +10,7 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'war'
-apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
+apply from: 'qretty.plugin'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
